@@ -1,0 +1,78 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Roles {
+  MASTER_ADMIN
+  ADMIN
+  EDITOR
+  USER
+}
+
+model User {
+  id                Int        @id @default(autoincrement())
+  createdAt         DateTime   @default(now())
+  email             String     @unique
+  name              String?
+  password          String
+  news              News[]
+  groupId           Int?
+  approvedDonations Donation[]
+  showOnHomepage    Boolean    @default(false)
+  isAdmin           Boolean    @default(false)
+  roles             Roles
+}
+
+model News {
+  id         Int        @id @default(autoincrement())
+  published  Boolean    @default(false)
+  title      String
+  author     User?      @relation(fields: [authorId], onDelete: Cascade, references: [id])
+  authorId   Int?
+  categories Category[]
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  name String
+  news News[]
+}
+
+model DonationAccount {
+  id            Int        @id @default(autoincrement())
+  name          String
+  accountNumber String
+  bankName      String
+  logoUrl       String
+  donations     Donation[]
+}
+
+enum DonationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model Donation {
+  id        Int             @id @default(autoincrement())
+  name      String
+  amount    Float
+  accountId Int
+  account   DonationAccount @relation(fields: [accountId], onDelete: Cascade, references: [id])
+  status    DonationStatus
+
+  approvedById Int?
+  approvedBy   User? @relation(fields: [approvedById], onDelete: Cascade, references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+}
