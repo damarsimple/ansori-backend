@@ -48,6 +48,31 @@ async function main() {
 
     }
 
+    for (let i = 0; i < 100; i++) {
+        await prisma.member.create({
+            data: {
+                name: `Test Member ${i + 1}`,
+                role: i == 0 ? "KETUA" : i > 10 ? "ANGGOTA" : "PENGURUS",
+                image: `https://picsum.photos/id/${i + 1}/200/300`,
+                description: "Memiliki banyak pengalaman dalam bidang kewirausahaan",
+
+            }
+        })
+
+    }
+
+    for (let i = 0; i < 100; i++) {
+        await prisma.imageGallery.create({
+            data: {
+                name: `Test Gambar ${i + 1}`,
+                image: `https://picsum.photos/id/${i + 200}/200/300`,
+                description: "Acara Seru dong",
+
+            }
+        })
+
+    }
+
     for (const name of [
         "Yayasan Ansori",
         "Yayasan Ansori Bersama",

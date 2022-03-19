@@ -26,6 +26,22 @@ type AggregateDonationAccount {
   _sum: DonationAccountSumAggregateOutputType
 }
 
+type AggregateImageGallery {
+  _avg: ImageGalleryAvgAggregateOutputType
+  _count: ImageGalleryCountAggregateOutputType
+  _max: ImageGalleryMaxAggregateOutputType
+  _min: ImageGalleryMinAggregateOutputType
+  _sum: ImageGallerySumAggregateOutputType
+}
+
+type AggregateMember {
+  _avg: MemberAvgAggregateOutputType
+  _count: MemberCountAggregateOutputType
+  _max: MemberMaxAggregateOutputType
+  _min: MemberMinAggregateOutputType
+  _sum: MemberSumAggregateOutputType
+}
+
 type AggregateNews {
   _avg: NewsAvgAggregateOutputType
   _count: NewsCountAggregateOutputType
@@ -1260,6 +1276,206 @@ input FloatWithAggregatesFilter {
   notIn: [Float]
 }
 
+type ImageGallery {
+  createdAt: DateTime!
+  description: String
+  id: Int!
+  image: String
+  name: String!
+  updatedAt: DateTime!
+}
+
+type ImageGalleryAvgAggregateOutputType {
+  id: Float
+}
+
+input ImageGalleryAvgOrderByAggregateInput {
+  id: SortOrder
+}
+
+type ImageGalleryCountAggregateOutputType {
+  _all: Int!
+  createdAt: Int!
+  description: Int!
+  id: Int!
+  image: Int!
+  name: Int!
+  updatedAt: Int!
+}
+
+input ImageGalleryCountOrderByAggregateInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  updatedAt: SortOrder
+}
+
+input ImageGalleryCreateInput {
+  createdAt: DateTime
+  description: String
+  image: String
+  name: String!
+  updatedAt: DateTime
+}
+
+input ImageGalleryCreateManyInput {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String!
+  updatedAt: DateTime
+}
+
+type ImageGalleryMaxAggregateOutputType {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String
+  updatedAt: DateTime
+}
+
+input ImageGalleryMaxOrderByAggregateInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  updatedAt: SortOrder
+}
+
+type ImageGalleryMinAggregateOutputType {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String
+  updatedAt: DateTime
+}
+
+input ImageGalleryMinOrderByAggregateInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  updatedAt: SortOrder
+}
+
+input ImageGalleryOrderByWithAggregationInput {
+  _avg: ImageGalleryAvgOrderByAggregateInput
+  _count: ImageGalleryCountOrderByAggregateInput
+  _max: ImageGalleryMaxOrderByAggregateInput
+  _min: ImageGalleryMinOrderByAggregateInput
+  _sum: ImageGallerySumOrderByAggregateInput
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  updatedAt: SortOrder
+}
+
+input ImageGalleryOrderByWithRelationInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  updatedAt: SortOrder
+}
+
+enum ImageGalleryScalarFieldEnum {
+  createdAt
+  description
+  id
+  image
+  name
+  updatedAt
+}
+
+input ImageGalleryScalarWhereWithAggregatesInput {
+  AND: [ImageGalleryScalarWhereWithAggregatesInput]
+  NOT: [ImageGalleryScalarWhereWithAggregatesInput]
+  OR: [ImageGalleryScalarWhereWithAggregatesInput]
+  createdAt: DateTimeWithAggregatesFilter
+  description: StringNullableWithAggregatesFilter
+  id: IntWithAggregatesFilter
+  image: StringNullableWithAggregatesFilter
+  name: StringWithAggregatesFilter
+  updatedAt: DateTimeWithAggregatesFilter
+}
+
+type ImageGallerySumAggregateOutputType {
+  id: Int
+}
+
+input ImageGallerySumOrderByAggregateInput {
+  id: SortOrder
+}
+
+input ImageGalleryUncheckedCreateInput {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String!
+  updatedAt: DateTime
+}
+
+input ImageGalleryUncheckedUpdateInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  id: IntFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input ImageGalleryUncheckedUpdateManyInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  id: IntFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input ImageGalleryUpdateInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input ImageGalleryUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input ImageGalleryWhereInput {
+  AND: [ImageGalleryWhereInput]
+  NOT: [ImageGalleryWhereInput]
+  OR: [ImageGalleryWhereInput]
+  createdAt: DateTimeFilter
+  description: StringNullableFilter
+  id: IntFilter
+  image: StringNullableFilter
+  name: StringFilter
+  updatedAt: DateTimeFilter
+}
+
+input ImageGalleryWhereUniqueInput {
+  id: Int
+}
+
 input IntFieldUpdateOperationsInput {
   decrement: Int
   divide: Int
@@ -1325,35 +1541,266 @@ input IntWithAggregatesFilter {
 """Json custom scalar type"""
 scalar Json
 
+type Member {
+  createdAt: DateTime!
+  description: String
+  id: Int!
+  image: String
+  name: String!
+  role: String!
+  updatedAt: DateTime!
+}
+
+type MemberAvgAggregateOutputType {
+  id: Float
+}
+
+input MemberAvgOrderByAggregateInput {
+  id: SortOrder
+}
+
+type MemberCountAggregateOutputType {
+  _all: Int!
+  createdAt: Int!
+  description: Int!
+  id: Int!
+  image: Int!
+  name: Int!
+  role: Int!
+  updatedAt: Int!
+}
+
+input MemberCountOrderByAggregateInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  role: SortOrder
+  updatedAt: SortOrder
+}
+
+input MemberCreateInput {
+  createdAt: DateTime
+  description: String
+  image: String
+  name: String!
+  role: String!
+  updatedAt: DateTime
+}
+
+input MemberCreateManyInput {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String!
+  role: String!
+  updatedAt: DateTime
+}
+
+type MemberMaxAggregateOutputType {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String
+  role: String
+  updatedAt: DateTime
+}
+
+input MemberMaxOrderByAggregateInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  role: SortOrder
+  updatedAt: SortOrder
+}
+
+type MemberMinAggregateOutputType {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String
+  role: String
+  updatedAt: DateTime
+}
+
+input MemberMinOrderByAggregateInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  role: SortOrder
+  updatedAt: SortOrder
+}
+
+input MemberOrderByWithAggregationInput {
+  _avg: MemberAvgOrderByAggregateInput
+  _count: MemberCountOrderByAggregateInput
+  _max: MemberMaxOrderByAggregateInput
+  _min: MemberMinOrderByAggregateInput
+  _sum: MemberSumOrderByAggregateInput
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  role: SortOrder
+  updatedAt: SortOrder
+}
+
+input MemberOrderByWithRelationInput {
+  createdAt: SortOrder
+  description: SortOrder
+  id: SortOrder
+  image: SortOrder
+  name: SortOrder
+  role: SortOrder
+  updatedAt: SortOrder
+}
+
+enum MemberScalarFieldEnum {
+  createdAt
+  description
+  id
+  image
+  name
+  role
+  updatedAt
+}
+
+input MemberScalarWhereWithAggregatesInput {
+  AND: [MemberScalarWhereWithAggregatesInput]
+  NOT: [MemberScalarWhereWithAggregatesInput]
+  OR: [MemberScalarWhereWithAggregatesInput]
+  createdAt: DateTimeWithAggregatesFilter
+  description: StringNullableWithAggregatesFilter
+  id: IntWithAggregatesFilter
+  image: StringNullableWithAggregatesFilter
+  name: StringWithAggregatesFilter
+  role: StringWithAggregatesFilter
+  updatedAt: DateTimeWithAggregatesFilter
+}
+
+type MemberSumAggregateOutputType {
+  id: Int
+}
+
+input MemberSumOrderByAggregateInput {
+  id: SortOrder
+}
+
+input MemberUncheckedCreateInput {
+  createdAt: DateTime
+  description: String
+  id: Int
+  image: String
+  name: String!
+  role: String!
+  updatedAt: DateTime
+}
+
+input MemberUncheckedUpdateInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  id: IntFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  role: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MemberUncheckedUpdateManyInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  id: IntFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  role: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MemberUpdateInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  role: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MemberUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  image: NullableStringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  role: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MemberWhereInput {
+  AND: [MemberWhereInput]
+  NOT: [MemberWhereInput]
+  OR: [MemberWhereInput]
+  createdAt: DateTimeFilter
+  description: StringNullableFilter
+  id: IntFilter
+  image: StringNullableFilter
+  name: StringFilter
+  role: StringFilter
+  updatedAt: DateTimeFilter
+}
+
+input MemberWhereUniqueInput {
+  id: Int
+}
+
 type Mutation {
   createOneCategory(data: CategoryCreateInput!): Category!
   createOneDonation(data: DonationCreateInput!): Donation!
   createOneDonationAccount(data: DonationAccountCreateInput!): DonationAccount!
+  createOneImageGallery(data: ImageGalleryCreateInput!): ImageGallery!
+  createOneMember(data: MemberCreateInput!): Member!
   createOneNews(data: NewsCreateInput!): News!
   createOneUser(data: UserCreateInput!): User!
   deleteManyCategory(where: CategoryWhereInput): BatchPayload!
   deleteManyDonation(where: DonationWhereInput): BatchPayload!
   deleteManyDonationAccount(where: DonationAccountWhereInput): BatchPayload!
+  deleteManyImageGallery(where: ImageGalleryWhereInput): BatchPayload!
+  deleteManyMember(where: MemberWhereInput): BatchPayload!
   deleteManyNews(where: NewsWhereInput): BatchPayload!
   deleteManyUser(where: UserWhereInput): BatchPayload!
   deleteOneCategory(where: CategoryWhereUniqueInput!): Category
   deleteOneDonation(where: DonationWhereUniqueInput!): Donation
   deleteOneDonationAccount(where: DonationAccountWhereUniqueInput!): DonationAccount
+  deleteOneImageGallery(where: ImageGalleryWhereUniqueInput!): ImageGallery
+  deleteOneMember(where: MemberWhereUniqueInput!): Member
   deleteOneNews(where: NewsWhereUniqueInput!): News
   deleteOneUser(where: UserWhereUniqueInput!): User
   updateManyCategory(data: CategoryUpdateManyMutationInput!, where: CategoryWhereInput): BatchPayload!
   updateManyDonation(data: DonationUpdateManyMutationInput!, where: DonationWhereInput): BatchPayload!
   updateManyDonationAccount(data: DonationAccountUpdateManyMutationInput!, where: DonationAccountWhereInput): BatchPayload!
+  updateManyImageGallery(data: ImageGalleryUpdateManyMutationInput!, where: ImageGalleryWhereInput): BatchPayload!
+  updateManyMember(data: MemberUpdateManyMutationInput!, where: MemberWhereInput): BatchPayload!
   updateManyNews(data: NewsUpdateManyMutationInput!, where: NewsWhereInput): BatchPayload!
   updateManyUser(data: UserUpdateManyMutationInput!, where: UserWhereInput): BatchPayload!
   updateOneCategory(data: CategoryUpdateInput!, where: CategoryWhereUniqueInput!): Category!
   updateOneDonation(data: DonationUpdateInput!, where: DonationWhereUniqueInput!): Donation!
   updateOneDonationAccount(data: DonationAccountUpdateInput!, where: DonationAccountWhereUniqueInput!): DonationAccount!
+  updateOneImageGallery(data: ImageGalleryUpdateInput!, where: ImageGalleryWhereUniqueInput!): ImageGallery!
+  updateOneMember(data: MemberUpdateInput!, where: MemberWhereUniqueInput!): Member!
   updateOneNews(data: NewsUpdateInput!, where: NewsWhereUniqueInput!): News!
   updateOneUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User!
   upsertOneCategory(create: CategoryCreateInput!, update: CategoryUpdateInput!, where: CategoryWhereUniqueInput!): Category!
   upsertOneDonation(create: DonationCreateInput!, update: DonationUpdateInput!, where: DonationWhereUniqueInput!): Donation!
   upsertOneDonationAccount(create: DonationAccountCreateInput!, update: DonationAccountUpdateInput!, where: DonationAccountWhereUniqueInput!): DonationAccount!
+  upsertOneImageGallery(create: ImageGalleryCreateInput!, update: ImageGalleryUpdateInput!, where: ImageGalleryWhereUniqueInput!): ImageGallery!
+  upsertOneMember(create: MemberCreateInput!, update: MemberUpdateInput!, where: MemberWhereUniqueInput!): Member!
   upsertOneNews(create: NewsCreateInput!, update: NewsUpdateInput!, where: NewsWhereUniqueInput!): News!
   upsertOneUser(create: UserCreateInput!, update: UserUpdateInput!, where: UserWhereUniqueInput!): User!
 }
@@ -2236,11 +2683,15 @@ type Query {
   aggregateCategory(cursor: CategoryWhereUniqueInput, orderBy: [CategoryOrderByWithRelationInput], skip: Int, take: Int, where: CategoryWhereInput): AggregateCategory
   aggregateDonation(cursor: DonationWhereUniqueInput, orderBy: [DonationOrderByWithRelationInput], skip: Int, take: Int, where: DonationWhereInput): AggregateDonation
   aggregateDonationAccount(cursor: DonationAccountWhereUniqueInput, orderBy: [DonationAccountOrderByWithRelationInput], skip: Int, take: Int, where: DonationAccountWhereInput): AggregateDonationAccount
+  aggregateImageGallery(cursor: ImageGalleryWhereUniqueInput, orderBy: [ImageGalleryOrderByWithRelationInput], skip: Int, take: Int, where: ImageGalleryWhereInput): AggregateImageGallery
+  aggregateMember(cursor: MemberWhereUniqueInput, orderBy: [MemberOrderByWithRelationInput], skip: Int, take: Int, where: MemberWhereInput): AggregateMember
   aggregateNews(cursor: NewsWhereUniqueInput, orderBy: [NewsOrderByWithRelationInput], skip: Int, take: Int, where: NewsWhereInput): AggregateNews
   aggregateUser(cursor: UserWhereUniqueInput, orderBy: [UserOrderByWithRelationInput], skip: Int, take: Int, where: UserWhereInput): AggregateUser
   findFirstCategory(cursor: CategoryWhereUniqueInput, distinct: [CategoryScalarFieldEnum], orderBy: [CategoryOrderByWithRelationInput], skip: Int, take: Int, where: CategoryWhereInput): Category
   findFirstDonation(cursor: DonationWhereUniqueInput, distinct: [DonationScalarFieldEnum], orderBy: [DonationOrderByWithRelationInput], skip: Int, take: Int, where: DonationWhereInput): Donation
   findFirstDonationAccount(cursor: DonationAccountWhereUniqueInput, distinct: [DonationAccountScalarFieldEnum], orderBy: [DonationAccountOrderByWithRelationInput], skip: Int, take: Int, where: DonationAccountWhereInput): DonationAccount
+  findFirstImageGallery(cursor: ImageGalleryWhereUniqueInput, distinct: [ImageGalleryScalarFieldEnum], orderBy: [ImageGalleryOrderByWithRelationInput], skip: Int, take: Int, where: ImageGalleryWhereInput): ImageGallery
+  findFirstMember(cursor: MemberWhereUniqueInput, distinct: [MemberScalarFieldEnum], orderBy: [MemberOrderByWithRelationInput], skip: Int, take: Int, where: MemberWhereInput): Member
   findFirstNews(cursor: NewsWhereUniqueInput, distinct: [NewsScalarFieldEnum], orderBy: [NewsOrderByWithRelationInput], skip: Int, take: Int, where: NewsWhereInput): News
   findFirstUser(cursor: UserWhereUniqueInput, distinct: [UserScalarFieldEnum], orderBy: [UserOrderByWithRelationInput], skip: Int, take: Int, where: UserWhereInput): User
   findManyCategory(cursor: CategoryWhereUniqueInput, distinct: [CategoryScalarFieldEnum], orderBy: [CategoryOrderByWithRelationInput], skip: Int, take: Int, where: CategoryWhereInput): [Category!]!
@@ -2249,6 +2700,10 @@ type Query {
   findManyDonationAccount(cursor: DonationAccountWhereUniqueInput, distinct: [DonationAccountScalarFieldEnum], orderBy: [DonationAccountOrderByWithRelationInput], skip: Int, take: Int, where: DonationAccountWhereInput): [DonationAccount!]!
   findManyDonationAccountCount(cursor: DonationAccountWhereUniqueInput, distinct: [DonationAccountScalarFieldEnum], orderBy: [DonationAccountOrderByWithRelationInput], skip: Int, take: Int, where: DonationAccountWhereInput): Int!
   findManyDonationCount(cursor: DonationWhereUniqueInput, distinct: [DonationScalarFieldEnum], orderBy: [DonationOrderByWithRelationInput], skip: Int, take: Int, where: DonationWhereInput): Int!
+  findManyImageGallery(cursor: ImageGalleryWhereUniqueInput, distinct: [ImageGalleryScalarFieldEnum], orderBy: [ImageGalleryOrderByWithRelationInput], skip: Int, take: Int, where: ImageGalleryWhereInput): [ImageGallery!]!
+  findManyImageGalleryCount(cursor: ImageGalleryWhereUniqueInput, distinct: [ImageGalleryScalarFieldEnum], orderBy: [ImageGalleryOrderByWithRelationInput], skip: Int, take: Int, where: ImageGalleryWhereInput): Int!
+  findManyMember(cursor: MemberWhereUniqueInput, distinct: [MemberScalarFieldEnum], orderBy: [MemberOrderByWithRelationInput], skip: Int, take: Int, where: MemberWhereInput): [Member!]!
+  findManyMemberCount(cursor: MemberWhereUniqueInput, distinct: [MemberScalarFieldEnum], orderBy: [MemberOrderByWithRelationInput], skip: Int, take: Int, where: MemberWhereInput): Int!
   findManyNews(cursor: NewsWhereUniqueInput, distinct: [NewsScalarFieldEnum], orderBy: [NewsOrderByWithRelationInput], skip: Int, take: Int, where: NewsWhereInput): [News!]!
   findManyNewsCount(cursor: NewsWhereUniqueInput, distinct: [NewsScalarFieldEnum], orderBy: [NewsOrderByWithRelationInput], skip: Int, take: Int, where: NewsWhereInput): Int!
   findManyUser(cursor: UserWhereUniqueInput, distinct: [UserScalarFieldEnum], orderBy: [UserOrderByWithRelationInput], skip: Int, take: Int, where: UserWhereInput): [User!]!
@@ -2256,6 +2711,8 @@ type Query {
   findUniqueCategory(where: CategoryWhereUniqueInput!): Category
   findUniqueDonation(where: DonationWhereUniqueInput!): Donation
   findUniqueDonationAccount(where: DonationAccountWhereUniqueInput!): DonationAccount
+  findUniqueImageGallery(where: ImageGalleryWhereUniqueInput!): ImageGallery
+  findUniqueMember(where: MemberWhereUniqueInput!): Member
   findUniqueNews(where: NewsWhereUniqueInput!): News
   findUniqueUser(where: UserWhereUniqueInput!): User
 }
@@ -2359,6 +2816,7 @@ type User {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean!
+  updatedAt: DateTime!
 }
 
 type UserAvgAggregateOutputType {
@@ -2378,6 +2836,7 @@ type UserCountAggregateOutputType {
   profilePicture: Int!
   roles: Int!
   showOnHomepage: Int!
+  updatedAt: Int!
 }
 
 input UserCountOrderByAggregateInput {
@@ -2388,6 +2847,7 @@ input UserCountOrderByAggregateInput {
   profilePicture: SortOrder
   roles: SortOrder
   showOnHomepage: SortOrder
+  updatedAt: SortOrder
 }
 
 type UserCountOutputType {
@@ -2404,6 +2864,7 @@ input UserCreateInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserCreateManyInput {
@@ -2414,6 +2875,7 @@ input UserCreateManyInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserCreateNestedOneWithoutApprovedDonationsInput {
@@ -2446,6 +2908,7 @@ input UserCreateWithoutApprovedDonationsInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserCreateWithoutNewsInput {
@@ -2456,6 +2919,7 @@ input UserCreateWithoutNewsInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 type UserMaxAggregateOutputType {
@@ -2466,6 +2930,7 @@ type UserMaxAggregateOutputType {
   profilePicture: String
   roles: Roles
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserMaxOrderByAggregateInput {
@@ -2476,6 +2941,7 @@ input UserMaxOrderByAggregateInput {
   profilePicture: SortOrder
   roles: SortOrder
   showOnHomepage: SortOrder
+  updatedAt: SortOrder
 }
 
 type UserMinAggregateOutputType {
@@ -2486,6 +2952,7 @@ type UserMinAggregateOutputType {
   profilePicture: String
   roles: Roles
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserMinOrderByAggregateInput {
@@ -2496,6 +2963,7 @@ input UserMinOrderByAggregateInput {
   profilePicture: SortOrder
   roles: SortOrder
   showOnHomepage: SortOrder
+  updatedAt: SortOrder
 }
 
 input UserOrderByWithAggregationInput {
@@ -2511,6 +2979,7 @@ input UserOrderByWithAggregationInput {
   profilePicture: SortOrder
   roles: SortOrder
   showOnHomepage: SortOrder
+  updatedAt: SortOrder
 }
 
 input UserOrderByWithRelationInput {
@@ -2523,6 +2992,7 @@ input UserOrderByWithRelationInput {
   profilePicture: SortOrder
   roles: SortOrder
   showOnHomepage: SortOrder
+  updatedAt: SortOrder
 }
 
 input UserRelationFilter {
@@ -2539,6 +3009,7 @@ enum UserScalarFieldEnum {
   profilePicture
   roles
   showOnHomepage
+  updatedAt
 }
 
 input UserScalarWhereWithAggregatesInput {
@@ -2552,6 +3023,7 @@ input UserScalarWhereWithAggregatesInput {
   profilePicture: StringNullableWithAggregatesFilter
   roles: EnumRolesWithAggregatesFilter
   showOnHomepage: BoolWithAggregatesFilter
+  updatedAt: DateTimeWithAggregatesFilter
 }
 
 type UserSumAggregateOutputType {
@@ -2572,6 +3044,7 @@ input UserUncheckedCreateInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserUncheckedCreateWithoutApprovedDonationsInput {
@@ -2583,6 +3056,7 @@ input UserUncheckedCreateWithoutApprovedDonationsInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserUncheckedCreateWithoutNewsInput {
@@ -2594,6 +3068,7 @@ input UserUncheckedCreateWithoutNewsInput {
   profilePicture: String
   roles: Roles!
   showOnHomepage: Boolean
+  updatedAt: DateTime
 }
 
 input UserUncheckedUpdateInput {
@@ -2606,6 +3081,7 @@ input UserUncheckedUpdateInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUncheckedUpdateManyInput {
@@ -2616,6 +3092,7 @@ input UserUncheckedUpdateManyInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUncheckedUpdateWithoutApprovedDonationsInput {
@@ -2627,6 +3104,7 @@ input UserUncheckedUpdateWithoutApprovedDonationsInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUncheckedUpdateWithoutNewsInput {
@@ -2638,6 +3116,7 @@ input UserUncheckedUpdateWithoutNewsInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUpdateInput {
@@ -2649,6 +3128,7 @@ input UserUpdateInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUpdateManyMutationInput {
@@ -2658,6 +3138,7 @@ input UserUpdateManyMutationInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUpdateOneWithoutApprovedDonationsInput {
@@ -2688,6 +3169,7 @@ input UserUpdateWithoutApprovedDonationsInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUpdateWithoutNewsInput {
@@ -2698,6 +3180,7 @@ input UserUpdateWithoutNewsInput {
   profilePicture: NullableStringFieldUpdateOperationsInput
   roles: EnumRolesFieldUpdateOperationsInput
   showOnHomepage: BoolFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input UserUpsertWithoutApprovedDonationsInput {
@@ -2723,6 +3206,7 @@ input UserWhereInput {
   profilePicture: StringNullableFilter
   roles: EnumRolesFilter
   showOnHomepage: BoolFilter
+  updatedAt: DateTimeFilter
 }
 
 input UserWhereUniqueInput {

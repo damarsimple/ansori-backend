@@ -951,6 +951,135 @@ export interface NexusGenInputs {
     not?: NexusGenInputs['NestedFloatWithAggregatesFilter'] | null; // NestedFloatWithAggregatesFilter
     notIn?: Array<number | null> | null; // [Float]
   }
+  ImageGalleryAvgOrderByAggregateInput: { // input type
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryCountOrderByAggregateInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryCreateInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    image?: string | null; // String
+    name: string; // String!
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGalleryCreateManyInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name: string; // String!
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGalleryMaxOrderByAggregateInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryMinOrderByAggregateInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryOrderByWithAggregationInput: { // input type
+    _avg?: NexusGenInputs['ImageGalleryAvgOrderByAggregateInput'] | null; // ImageGalleryAvgOrderByAggregateInput
+    _count?: NexusGenInputs['ImageGalleryCountOrderByAggregateInput'] | null; // ImageGalleryCountOrderByAggregateInput
+    _max?: NexusGenInputs['ImageGalleryMaxOrderByAggregateInput'] | null; // ImageGalleryMaxOrderByAggregateInput
+    _min?: NexusGenInputs['ImageGalleryMinOrderByAggregateInput'] | null; // ImageGalleryMinOrderByAggregateInput
+    _sum?: NexusGenInputs['ImageGallerySumOrderByAggregateInput'] | null; // ImageGallerySumOrderByAggregateInput
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryOrderByWithRelationInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryScalarWhereWithAggregatesInput: { // input type
+    AND?: Array<NexusGenInputs['ImageGalleryScalarWhereWithAggregatesInput'] | null> | null; // [ImageGalleryScalarWhereWithAggregatesInput]
+    NOT?: Array<NexusGenInputs['ImageGalleryScalarWhereWithAggregatesInput'] | null> | null; // [ImageGalleryScalarWhereWithAggregatesInput]
+    OR?: Array<NexusGenInputs['ImageGalleryScalarWhereWithAggregatesInput'] | null> | null; // [ImageGalleryScalarWhereWithAggregatesInput]
+    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
+    description?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
+    id?: NexusGenInputs['IntWithAggregatesFilter'] | null; // IntWithAggregatesFilter
+    image?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
+    name?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
+    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
+  }
+  ImageGallerySumOrderByAggregateInput: { // input type
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  ImageGalleryUncheckedCreateInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name: string; // String!
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGalleryUncheckedUpdateInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  ImageGalleryUncheckedUpdateManyInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  ImageGalleryUpdateInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  ImageGalleryUpdateManyMutationInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  ImageGalleryWhereInput: { // input type
+    AND?: Array<NexusGenInputs['ImageGalleryWhereInput'] | null> | null; // [ImageGalleryWhereInput]
+    NOT?: Array<NexusGenInputs['ImageGalleryWhereInput'] | null> | null; // [ImageGalleryWhereInput]
+    OR?: Array<NexusGenInputs['ImageGalleryWhereInput'] | null> | null; // [ImageGalleryWhereInput]
+    createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    description?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
+    id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    image?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
+    name?: NexusGenInputs['StringFilter'] | null; // StringFilter
+    updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+  }
+  ImageGalleryWhereUniqueInput: { // input type
+    id?: number | null; // Int
+  }
   IntFieldUpdateOperationsInput: { // input type
     decrement?: number | null; // Int
     divide?: number | null; // Int
@@ -1007,6 +1136,149 @@ export interface NexusGenInputs {
     lte?: number | null; // Int
     not?: NexusGenInputs['NestedIntWithAggregatesFilter'] | null; // NestedIntWithAggregatesFilter
     notIn?: Array<number | null> | null; // [Int]
+  }
+  MemberAvgOrderByAggregateInput: { // input type
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberCountOrderByAggregateInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    role?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberCreateInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    image?: string | null; // String
+    name: string; // String!
+    role: string; // String!
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberCreateManyInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name: string; // String!
+    role: string; // String!
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberMaxOrderByAggregateInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    role?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberMinOrderByAggregateInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    role?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberOrderByWithAggregationInput: { // input type
+    _avg?: NexusGenInputs['MemberAvgOrderByAggregateInput'] | null; // MemberAvgOrderByAggregateInput
+    _count?: NexusGenInputs['MemberCountOrderByAggregateInput'] | null; // MemberCountOrderByAggregateInput
+    _max?: NexusGenInputs['MemberMaxOrderByAggregateInput'] | null; // MemberMaxOrderByAggregateInput
+    _min?: NexusGenInputs['MemberMinOrderByAggregateInput'] | null; // MemberMinOrderByAggregateInput
+    _sum?: NexusGenInputs['MemberSumOrderByAggregateInput'] | null; // MemberSumOrderByAggregateInput
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    role?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberOrderByWithRelationInput: { // input type
+    createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    role?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberScalarWhereWithAggregatesInput: { // input type
+    AND?: Array<NexusGenInputs['MemberScalarWhereWithAggregatesInput'] | null> | null; // [MemberScalarWhereWithAggregatesInput]
+    NOT?: Array<NexusGenInputs['MemberScalarWhereWithAggregatesInput'] | null> | null; // [MemberScalarWhereWithAggregatesInput]
+    OR?: Array<NexusGenInputs['MemberScalarWhereWithAggregatesInput'] | null> | null; // [MemberScalarWhereWithAggregatesInput]
+    createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
+    description?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
+    id?: NexusGenInputs['IntWithAggregatesFilter'] | null; // IntWithAggregatesFilter
+    image?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
+    name?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
+    role?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
+    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
+  }
+  MemberSumOrderByAggregateInput: { // input type
+    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+  }
+  MemberUncheckedCreateInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name: string; // String!
+    role: string; // String!
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberUncheckedUpdateInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    role?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  MemberUncheckedUpdateManyInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    role?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  MemberUpdateInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    role?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  MemberUpdateManyMutationInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    image?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    role?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  MemberWhereInput: { // input type
+    AND?: Array<NexusGenInputs['MemberWhereInput'] | null> | null; // [MemberWhereInput]
+    NOT?: Array<NexusGenInputs['MemberWhereInput'] | null> | null; // [MemberWhereInput]
+    OR?: Array<NexusGenInputs['MemberWhereInput'] | null> | null; // [MemberWhereInput]
+    createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    description?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
+    id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    image?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
+    name?: NexusGenInputs['StringFilter'] | null; // StringFilter
+    role?: NexusGenInputs['StringFilter'] | null; // StringFilter
+    updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+  }
+  MemberWhereUniqueInput: { // input type
+    id?: number | null; // Int
   }
   NestedBoolFilter: { // input type
     equals?: boolean | null; // Boolean
@@ -1795,6 +2067,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserCreateInput: { // input type
     approvedDonations?: NexusGenInputs['DonationCreateNestedManyWithoutApprovedByInput'] | null; // DonationCreateNestedManyWithoutApprovedByInput
@@ -1805,6 +2078,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserCreateManyInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -1814,6 +2088,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserCreateNestedOneWithoutApprovedDonationsInput: { // input type
     connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
@@ -1841,6 +2116,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserCreateWithoutNewsInput: { // input type
     approvedDonations?: NexusGenInputs['DonationCreateNestedManyWithoutApprovedByInput'] | null; // DonationCreateNestedManyWithoutApprovedByInput
@@ -1850,6 +2126,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserMaxOrderByAggregateInput: { // input type
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -1859,6 +2136,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserMinOrderByAggregateInput: { // input type
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -1868,6 +2146,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserOrderByWithAggregationInput: { // input type
     _avg?: NexusGenInputs['UserAvgOrderByAggregateInput'] | null; // UserAvgOrderByAggregateInput
@@ -1882,6 +2161,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserOrderByWithRelationInput: { // input type
     approvedDonations?: NexusGenInputs['DonationOrderByRelationAggregateInput'] | null; // DonationOrderByRelationAggregateInput
@@ -1893,6 +2173,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserRelationFilter: { // input type
     is?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
@@ -1909,6 +2190,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
     roles?: NexusGenInputs['EnumRolesWithAggregatesFilter'] | null; // EnumRolesWithAggregatesFilter
     showOnHomepage?: NexusGenInputs['BoolWithAggregatesFilter'] | null; // BoolWithAggregatesFilter
+    updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
   }
   UserSumOrderByAggregateInput: { // input type
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -1923,6 +2205,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserUncheckedCreateWithoutApprovedDonationsInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -1933,6 +2216,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserUncheckedCreateWithoutNewsInput: { // input type
     approvedDonations?: NexusGenInputs['DonationUncheckedCreateNestedManyWithoutApprovedByInput'] | null; // DonationUncheckedCreateNestedManyWithoutApprovedByInput
@@ -1943,6 +2227,7 @@ export interface NexusGenInputs {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserUncheckedUpdateInput: { // input type
     approvedDonations?: NexusGenInputs['DonationUncheckedUpdateManyWithoutApprovedByInput'] | null; // DonationUncheckedUpdateManyWithoutApprovedByInput
@@ -1954,6 +2239,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUncheckedUpdateManyInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -1963,6 +2249,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUncheckedUpdateWithoutApprovedDonationsInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -1973,6 +2260,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUncheckedUpdateWithoutNewsInput: { // input type
     approvedDonations?: NexusGenInputs['DonationUncheckedUpdateManyWithoutApprovedByInput'] | null; // DonationUncheckedUpdateManyWithoutApprovedByInput
@@ -1983,6 +2271,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUpdateInput: { // input type
     approvedDonations?: NexusGenInputs['DonationUpdateManyWithoutApprovedByInput'] | null; // DonationUpdateManyWithoutApprovedByInput
@@ -1993,6 +2282,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUpdateManyMutationInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -2001,6 +2291,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUpdateOneWithoutApprovedDonationsInput: { // input type
     connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
@@ -2028,6 +2319,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUpdateWithoutNewsInput: { // input type
     approvedDonations?: NexusGenInputs['DonationUpdateManyWithoutApprovedByInput'] | null; // DonationUpdateManyWithoutApprovedByInput
@@ -2037,6 +2329,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
+    updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
   }
   UserUpsertWithoutApprovedDonationsInput: { // input type
     create: NexusGenInputs['UserUncheckedCreateWithoutApprovedDonationsInput']; // UserUncheckedCreateWithoutApprovedDonationsInput!
@@ -2059,6 +2352,7 @@ export interface NexusGenInputs {
     profilePicture?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     roles?: NexusGenInputs['EnumRolesFilter'] | null; // EnumRolesFilter
     showOnHomepage?: NexusGenInputs['BoolFilter'] | null; // BoolFilter
+    updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
   }
   UserWhereUniqueInput: { // input type
     email?: string | null; // String
@@ -2071,11 +2365,13 @@ export interface NexusGenEnums {
   DonationAccountScalarFieldEnum: "accountNumber" | "bankName" | "id" | "logoUrl" | "name"
   DonationScalarFieldEnum: "accountId" | "amount" | "approvedById" | "createdAt" | "id" | "message" | "name" | "status" | "updatedAt"
   DonationStatus: "APPROVED" | "PENDING" | "REJECTED"
+  ImageGalleryScalarFieldEnum: "createdAt" | "description" | "id" | "image" | "name" | "updatedAt"
+  MemberScalarFieldEnum: "createdAt" | "description" | "id" | "image" | "name" | "role" | "updatedAt"
   NewsScalarFieldEnum: "authorId" | "content" | "createdAt" | "description" | "id" | "potrait" | "published" | "slug" | "title" | "updatedAt" | "views" | "wide"
   QueryMode: "default" | "insensitive"
   Roles: "ADMIN" | "EDITOR" | "MASTER_ADMIN" | "USER"
   SortOrder: "asc" | "desc"
-  UserScalarFieldEnum: "createdAt" | "email" | "id" | "name" | "password" | "profilePicture" | "roles" | "showOnHomepage"
+  UserScalarFieldEnum: "createdAt" | "email" | "id" | "name" | "password" | "profilePicture" | "roles" | "showOnHomepage" | "updatedAt"
 }
 
 export interface NexusGenScalars {
@@ -2111,6 +2407,20 @@ export interface NexusGenObjects {
     _max?: NexusGenRootTypes['DonationAccountMaxAggregateOutputType'] | null; // DonationAccountMaxAggregateOutputType
     _min?: NexusGenRootTypes['DonationAccountMinAggregateOutputType'] | null; // DonationAccountMinAggregateOutputType
     _sum?: NexusGenRootTypes['DonationAccountSumAggregateOutputType'] | null; // DonationAccountSumAggregateOutputType
+  }
+  AggregateImageGallery: { // root type
+    _avg?: NexusGenRootTypes['ImageGalleryAvgAggregateOutputType'] | null; // ImageGalleryAvgAggregateOutputType
+    _count?: NexusGenRootTypes['ImageGalleryCountAggregateOutputType'] | null; // ImageGalleryCountAggregateOutputType
+    _max?: NexusGenRootTypes['ImageGalleryMaxAggregateOutputType'] | null; // ImageGalleryMaxAggregateOutputType
+    _min?: NexusGenRootTypes['ImageGalleryMinAggregateOutputType'] | null; // ImageGalleryMinAggregateOutputType
+    _sum?: NexusGenRootTypes['ImageGallerySumAggregateOutputType'] | null; // ImageGallerySumAggregateOutputType
+  }
+  AggregateMember: { // root type
+    _avg?: NexusGenRootTypes['MemberAvgAggregateOutputType'] | null; // MemberAvgAggregateOutputType
+    _count?: NexusGenRootTypes['MemberCountAggregateOutputType'] | null; // MemberCountAggregateOutputType
+    _max?: NexusGenRootTypes['MemberMaxAggregateOutputType'] | null; // MemberMaxAggregateOutputType
+    _min?: NexusGenRootTypes['MemberMinAggregateOutputType'] | null; // MemberMinAggregateOutputType
+    _sum?: NexusGenRootTypes['MemberSumAggregateOutputType'] | null; // MemberSumAggregateOutputType
   }
   AggregateNews: { // root type
     _avg?: NexusGenRootTypes['NewsAvgAggregateOutputType'] | null; // NewsAvgAggregateOutputType
@@ -2254,6 +2564,88 @@ export interface NexusGenObjects {
     approvedById?: number | null; // Int
     id?: number | null; // Int
   }
+  ImageGallery: { // root type
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
+    description?: string | null; // String
+    id: number; // Int!
+    image?: string | null; // String
+    name: string; // String!
+    updatedAt: NexusGenScalars['DateTime']; // DateTime!
+  }
+  ImageGalleryAvgAggregateOutputType: { // root type
+    id?: number | null; // Float
+  }
+  ImageGalleryCountAggregateOutputType: { // root type
+    _all: number; // Int!
+    createdAt: number; // Int!
+    description: number; // Int!
+    id: number; // Int!
+    image: number; // Int!
+    name: number; // Int!
+    updatedAt: number; // Int!
+  }
+  ImageGalleryMaxAggregateOutputType: { // root type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name?: string | null; // String
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGalleryMinAggregateOutputType: { // root type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name?: string | null; // String
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGallerySumAggregateOutputType: { // root type
+    id?: number | null; // Int
+  }
+  Member: { // root type
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
+    description?: string | null; // String
+    id: number; // Int!
+    image?: string | null; // String
+    name: string; // String!
+    role: string; // String!
+    updatedAt: NexusGenScalars['DateTime']; // DateTime!
+  }
+  MemberAvgAggregateOutputType: { // root type
+    id?: number | null; // Float
+  }
+  MemberCountAggregateOutputType: { // root type
+    _all: number; // Int!
+    createdAt: number; // Int!
+    description: number; // Int!
+    id: number; // Int!
+    image: number; // Int!
+    name: number; // Int!
+    role: number; // Int!
+    updatedAt: number; // Int!
+  }
+  MemberMaxAggregateOutputType: { // root type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name?: string | null; // String
+    role?: string | null; // String
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberMinAggregateOutputType: { // root type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    id?: number | null; // Int
+    image?: string | null; // String
+    name?: string | null; // String
+    role?: string | null; // String
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberSumAggregateOutputType: { // root type
+    id?: number | null; // Int
+  }
   Mutation: {};
   News: { // root type
     authorId?: number | null; // Int
@@ -2335,6 +2727,7 @@ export interface NexusGenObjects {
     profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage: boolean; // Boolean!
+    updatedAt: NexusGenScalars['DateTime']; // DateTime!
   }
   UserAvgAggregateOutputType: { // root type
     id?: number | null; // Float
@@ -2348,6 +2741,7 @@ export interface NexusGenObjects {
     profilePicture: number; // Int!
     roles: number; // Int!
     showOnHomepage: number; // Int!
+    updatedAt: number; // Int!
   }
   UserCountOutputType: { // root type
     approvedDonations: number; // Int!
@@ -2361,6 +2755,7 @@ export interface NexusGenObjects {
     profilePicture?: string | null; // String
     roles?: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserMinAggregateOutputType: { // root type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -2370,6 +2765,7 @@ export interface NexusGenObjects {
     profilePicture?: string | null; // String
     roles?: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage?: boolean | null; // Boolean
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserSumAggregateOutputType: { // root type
     id?: number | null; // Int
@@ -2407,6 +2803,20 @@ export interface NexusGenFieldTypes {
     _max: NexusGenRootTypes['DonationAccountMaxAggregateOutputType'] | null; // DonationAccountMaxAggregateOutputType
     _min: NexusGenRootTypes['DonationAccountMinAggregateOutputType'] | null; // DonationAccountMinAggregateOutputType
     _sum: NexusGenRootTypes['DonationAccountSumAggregateOutputType'] | null; // DonationAccountSumAggregateOutputType
+  }
+  AggregateImageGallery: { // field return type
+    _avg: NexusGenRootTypes['ImageGalleryAvgAggregateOutputType'] | null; // ImageGalleryAvgAggregateOutputType
+    _count: NexusGenRootTypes['ImageGalleryCountAggregateOutputType'] | null; // ImageGalleryCountAggregateOutputType
+    _max: NexusGenRootTypes['ImageGalleryMaxAggregateOutputType'] | null; // ImageGalleryMaxAggregateOutputType
+    _min: NexusGenRootTypes['ImageGalleryMinAggregateOutputType'] | null; // ImageGalleryMinAggregateOutputType
+    _sum: NexusGenRootTypes['ImageGallerySumAggregateOutputType'] | null; // ImageGallerySumAggregateOutputType
+  }
+  AggregateMember: { // field return type
+    _avg: NexusGenRootTypes['MemberAvgAggregateOutputType'] | null; // MemberAvgAggregateOutputType
+    _count: NexusGenRootTypes['MemberCountAggregateOutputType'] | null; // MemberCountAggregateOutputType
+    _max: NexusGenRootTypes['MemberMaxAggregateOutputType'] | null; // MemberMaxAggregateOutputType
+    _min: NexusGenRootTypes['MemberMinAggregateOutputType'] | null; // MemberMinAggregateOutputType
+    _sum: NexusGenRootTypes['MemberSumAggregateOutputType'] | null; // MemberSumAggregateOutputType
   }
   AggregateNews: { // field return type
     _avg: NexusGenRootTypes['NewsAvgAggregateOutputType'] | null; // NewsAvgAggregateOutputType
@@ -2556,35 +2966,129 @@ export interface NexusGenFieldTypes {
     approvedById: number | null; // Int
     id: number | null; // Int
   }
+  ImageGallery: { // field return type
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
+    description: string | null; // String
+    id: number; // Int!
+    image: string | null; // String
+    name: string; // String!
+    updatedAt: NexusGenScalars['DateTime']; // DateTime!
+  }
+  ImageGalleryAvgAggregateOutputType: { // field return type
+    id: number | null; // Float
+  }
+  ImageGalleryCountAggregateOutputType: { // field return type
+    _all: number; // Int!
+    createdAt: number; // Int!
+    description: number; // Int!
+    id: number; // Int!
+    image: number; // Int!
+    name: number; // Int!
+    updatedAt: number; // Int!
+  }
+  ImageGalleryMaxAggregateOutputType: { // field return type
+    createdAt: NexusGenScalars['DateTime'] | null; // DateTime
+    description: string | null; // String
+    id: number | null; // Int
+    image: string | null; // String
+    name: string | null; // String
+    updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGalleryMinAggregateOutputType: { // field return type
+    createdAt: NexusGenScalars['DateTime'] | null; // DateTime
+    description: string | null; // String
+    id: number | null; // Int
+    image: string | null; // String
+    name: string | null; // String
+    updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  ImageGallerySumAggregateOutputType: { // field return type
+    id: number | null; // Int
+  }
+  Member: { // field return type
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
+    description: string | null; // String
+    id: number; // Int!
+    image: string | null; // String
+    name: string; // String!
+    role: string; // String!
+    updatedAt: NexusGenScalars['DateTime']; // DateTime!
+  }
+  MemberAvgAggregateOutputType: { // field return type
+    id: number | null; // Float
+  }
+  MemberCountAggregateOutputType: { // field return type
+    _all: number; // Int!
+    createdAt: number; // Int!
+    description: number; // Int!
+    id: number; // Int!
+    image: number; // Int!
+    name: number; // Int!
+    role: number; // Int!
+    updatedAt: number; // Int!
+  }
+  MemberMaxAggregateOutputType: { // field return type
+    createdAt: NexusGenScalars['DateTime'] | null; // DateTime
+    description: string | null; // String
+    id: number | null; // Int
+    image: string | null; // String
+    name: string | null; // String
+    role: string | null; // String
+    updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberMinAggregateOutputType: { // field return type
+    createdAt: NexusGenScalars['DateTime'] | null; // DateTime
+    description: string | null; // String
+    id: number | null; // Int
+    image: string | null; // String
+    name: string | null; // String
+    role: string | null; // String
+    updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
+  }
+  MemberSumAggregateOutputType: { // field return type
+    id: number | null; // Int
+  }
   Mutation: { // field return type
     createOneCategory: NexusGenRootTypes['Category']; // Category!
     createOneDonation: NexusGenRootTypes['Donation']; // Donation!
     createOneDonationAccount: NexusGenRootTypes['DonationAccount']; // DonationAccount!
+    createOneImageGallery: NexusGenRootTypes['ImageGallery']; // ImageGallery!
+    createOneMember: NexusGenRootTypes['Member']; // Member!
     createOneNews: NexusGenRootTypes['News']; // News!
     createOneUser: NexusGenRootTypes['User']; // User!
     deleteManyCategory: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     deleteManyDonation: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     deleteManyDonationAccount: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteManyImageGallery: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    deleteManyMember: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     deleteManyNews: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     deleteManyUser: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     deleteOneCategory: NexusGenRootTypes['Category'] | null; // Category
     deleteOneDonation: NexusGenRootTypes['Donation'] | null; // Donation
     deleteOneDonationAccount: NexusGenRootTypes['DonationAccount'] | null; // DonationAccount
+    deleteOneImageGallery: NexusGenRootTypes['ImageGallery'] | null; // ImageGallery
+    deleteOneMember: NexusGenRootTypes['Member'] | null; // Member
     deleteOneNews: NexusGenRootTypes['News'] | null; // News
     deleteOneUser: NexusGenRootTypes['User'] | null; // User
     updateManyCategory: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyDonation: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyDonationAccount: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateManyImageGallery: NexusGenRootTypes['BatchPayload']; // BatchPayload!
+    updateManyMember: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyNews: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyUser: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateOneCategory: NexusGenRootTypes['Category']; // Category!
     updateOneDonation: NexusGenRootTypes['Donation']; // Donation!
     updateOneDonationAccount: NexusGenRootTypes['DonationAccount']; // DonationAccount!
+    updateOneImageGallery: NexusGenRootTypes['ImageGallery']; // ImageGallery!
+    updateOneMember: NexusGenRootTypes['Member']; // Member!
     updateOneNews: NexusGenRootTypes['News']; // News!
     updateOneUser: NexusGenRootTypes['User']; // User!
     upsertOneCategory: NexusGenRootTypes['Category']; // Category!
     upsertOneDonation: NexusGenRootTypes['Donation']; // Donation!
     upsertOneDonationAccount: NexusGenRootTypes['DonationAccount']; // DonationAccount!
+    upsertOneImageGallery: NexusGenRootTypes['ImageGallery']; // ImageGallery!
+    upsertOneMember: NexusGenRootTypes['Member']; // Member!
     upsertOneNews: NexusGenRootTypes['News']; // News!
     upsertOneUser: NexusGenRootTypes['User']; // User!
   }
@@ -2665,11 +3169,15 @@ export interface NexusGenFieldTypes {
     aggregateCategory: NexusGenRootTypes['AggregateCategory'] | null; // AggregateCategory
     aggregateDonation: NexusGenRootTypes['AggregateDonation'] | null; // AggregateDonation
     aggregateDonationAccount: NexusGenRootTypes['AggregateDonationAccount'] | null; // AggregateDonationAccount
+    aggregateImageGallery: NexusGenRootTypes['AggregateImageGallery'] | null; // AggregateImageGallery
+    aggregateMember: NexusGenRootTypes['AggregateMember'] | null; // AggregateMember
     aggregateNews: NexusGenRootTypes['AggregateNews'] | null; // AggregateNews
     aggregateUser: NexusGenRootTypes['AggregateUser'] | null; // AggregateUser
     findFirstCategory: NexusGenRootTypes['Category'] | null; // Category
     findFirstDonation: NexusGenRootTypes['Donation'] | null; // Donation
     findFirstDonationAccount: NexusGenRootTypes['DonationAccount'] | null; // DonationAccount
+    findFirstImageGallery: NexusGenRootTypes['ImageGallery'] | null; // ImageGallery
+    findFirstMember: NexusGenRootTypes['Member'] | null; // Member
     findFirstNews: NexusGenRootTypes['News'] | null; // News
     findFirstUser: NexusGenRootTypes['User'] | null; // User
     findManyCategory: NexusGenRootTypes['Category'][]; // [Category!]!
@@ -2678,6 +3186,10 @@ export interface NexusGenFieldTypes {
     findManyDonationAccount: NexusGenRootTypes['DonationAccount'][]; // [DonationAccount!]!
     findManyDonationAccountCount: number; // Int!
     findManyDonationCount: number; // Int!
+    findManyImageGallery: NexusGenRootTypes['ImageGallery'][]; // [ImageGallery!]!
+    findManyImageGalleryCount: number; // Int!
+    findManyMember: NexusGenRootTypes['Member'][]; // [Member!]!
+    findManyMemberCount: number; // Int!
     findManyNews: NexusGenRootTypes['News'][]; // [News!]!
     findManyNewsCount: number; // Int!
     findManyUser: NexusGenRootTypes['User'][]; // [User!]!
@@ -2685,6 +3197,8 @@ export interface NexusGenFieldTypes {
     findUniqueCategory: NexusGenRootTypes['Category'] | null; // Category
     findUniqueDonation: NexusGenRootTypes['Donation'] | null; // Donation
     findUniqueDonationAccount: NexusGenRootTypes['DonationAccount'] | null; // DonationAccount
+    findUniqueImageGallery: NexusGenRootTypes['ImageGallery'] | null; // ImageGallery
+    findUniqueMember: NexusGenRootTypes['Member'] | null; // Member
     findUniqueNews: NexusGenRootTypes['News'] | null; // News
     findUniqueUser: NexusGenRootTypes['User'] | null; // User
   }
@@ -2700,6 +3214,7 @@ export interface NexusGenFieldTypes {
     profilePicture: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage: boolean; // Boolean!
+    updatedAt: NexusGenScalars['DateTime']; // DateTime!
   }
   UserAvgAggregateOutputType: { // field return type
     id: number | null; // Float
@@ -2713,6 +3228,7 @@ export interface NexusGenFieldTypes {
     profilePicture: number; // Int!
     roles: number; // Int!
     showOnHomepage: number; // Int!
+    updatedAt: number; // Int!
   }
   UserCountOutputType: { // field return type
     approvedDonations: number; // Int!
@@ -2726,6 +3242,7 @@ export interface NexusGenFieldTypes {
     profilePicture: string | null; // String
     roles: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage: boolean | null; // Boolean
+    updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserMinAggregateOutputType: { // field return type
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
@@ -2735,6 +3252,7 @@ export interface NexusGenFieldTypes {
     profilePicture: string | null; // String
     roles: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage: boolean | null; // Boolean
+    updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
   }
   UserSumAggregateOutputType: { // field return type
     id: number | null; // Int
@@ -2762,6 +3280,20 @@ export interface NexusGenFieldTypeNames {
     _max: 'DonationAccountMaxAggregateOutputType'
     _min: 'DonationAccountMinAggregateOutputType'
     _sum: 'DonationAccountSumAggregateOutputType'
+  }
+  AggregateImageGallery: { // field return type name
+    _avg: 'ImageGalleryAvgAggregateOutputType'
+    _count: 'ImageGalleryCountAggregateOutputType'
+    _max: 'ImageGalleryMaxAggregateOutputType'
+    _min: 'ImageGalleryMinAggregateOutputType'
+    _sum: 'ImageGallerySumAggregateOutputType'
+  }
+  AggregateMember: { // field return type name
+    _avg: 'MemberAvgAggregateOutputType'
+    _count: 'MemberCountAggregateOutputType'
+    _max: 'MemberMaxAggregateOutputType'
+    _min: 'MemberMinAggregateOutputType'
+    _sum: 'MemberSumAggregateOutputType'
   }
   AggregateNews: { // field return type name
     _avg: 'NewsAvgAggregateOutputType'
@@ -2911,35 +3443,129 @@ export interface NexusGenFieldTypeNames {
     approvedById: 'Int'
     id: 'Int'
   }
+  ImageGallery: { // field return type name
+    createdAt: 'DateTime'
+    description: 'String'
+    id: 'Int'
+    image: 'String'
+    name: 'String'
+    updatedAt: 'DateTime'
+  }
+  ImageGalleryAvgAggregateOutputType: { // field return type name
+    id: 'Float'
+  }
+  ImageGalleryCountAggregateOutputType: { // field return type name
+    _all: 'Int'
+    createdAt: 'Int'
+    description: 'Int'
+    id: 'Int'
+    image: 'Int'
+    name: 'Int'
+    updatedAt: 'Int'
+  }
+  ImageGalleryMaxAggregateOutputType: { // field return type name
+    createdAt: 'DateTime'
+    description: 'String'
+    id: 'Int'
+    image: 'String'
+    name: 'String'
+    updatedAt: 'DateTime'
+  }
+  ImageGalleryMinAggregateOutputType: { // field return type name
+    createdAt: 'DateTime'
+    description: 'String'
+    id: 'Int'
+    image: 'String'
+    name: 'String'
+    updatedAt: 'DateTime'
+  }
+  ImageGallerySumAggregateOutputType: { // field return type name
+    id: 'Int'
+  }
+  Member: { // field return type name
+    createdAt: 'DateTime'
+    description: 'String'
+    id: 'Int'
+    image: 'String'
+    name: 'String'
+    role: 'String'
+    updatedAt: 'DateTime'
+  }
+  MemberAvgAggregateOutputType: { // field return type name
+    id: 'Float'
+  }
+  MemberCountAggregateOutputType: { // field return type name
+    _all: 'Int'
+    createdAt: 'Int'
+    description: 'Int'
+    id: 'Int'
+    image: 'Int'
+    name: 'Int'
+    role: 'Int'
+    updatedAt: 'Int'
+  }
+  MemberMaxAggregateOutputType: { // field return type name
+    createdAt: 'DateTime'
+    description: 'String'
+    id: 'Int'
+    image: 'String'
+    name: 'String'
+    role: 'String'
+    updatedAt: 'DateTime'
+  }
+  MemberMinAggregateOutputType: { // field return type name
+    createdAt: 'DateTime'
+    description: 'String'
+    id: 'Int'
+    image: 'String'
+    name: 'String'
+    role: 'String'
+    updatedAt: 'DateTime'
+  }
+  MemberSumAggregateOutputType: { // field return type name
+    id: 'Int'
+  }
   Mutation: { // field return type name
     createOneCategory: 'Category'
     createOneDonation: 'Donation'
     createOneDonationAccount: 'DonationAccount'
+    createOneImageGallery: 'ImageGallery'
+    createOneMember: 'Member'
     createOneNews: 'News'
     createOneUser: 'User'
     deleteManyCategory: 'BatchPayload'
     deleteManyDonation: 'BatchPayload'
     deleteManyDonationAccount: 'BatchPayload'
+    deleteManyImageGallery: 'BatchPayload'
+    deleteManyMember: 'BatchPayload'
     deleteManyNews: 'BatchPayload'
     deleteManyUser: 'BatchPayload'
     deleteOneCategory: 'Category'
     deleteOneDonation: 'Donation'
     deleteOneDonationAccount: 'DonationAccount'
+    deleteOneImageGallery: 'ImageGallery'
+    deleteOneMember: 'Member'
     deleteOneNews: 'News'
     deleteOneUser: 'User'
     updateManyCategory: 'BatchPayload'
     updateManyDonation: 'BatchPayload'
     updateManyDonationAccount: 'BatchPayload'
+    updateManyImageGallery: 'BatchPayload'
+    updateManyMember: 'BatchPayload'
     updateManyNews: 'BatchPayload'
     updateManyUser: 'BatchPayload'
     updateOneCategory: 'Category'
     updateOneDonation: 'Donation'
     updateOneDonationAccount: 'DonationAccount'
+    updateOneImageGallery: 'ImageGallery'
+    updateOneMember: 'Member'
     updateOneNews: 'News'
     updateOneUser: 'User'
     upsertOneCategory: 'Category'
     upsertOneDonation: 'Donation'
     upsertOneDonationAccount: 'DonationAccount'
+    upsertOneImageGallery: 'ImageGallery'
+    upsertOneMember: 'Member'
     upsertOneNews: 'News'
     upsertOneUser: 'User'
   }
@@ -3020,11 +3646,15 @@ export interface NexusGenFieldTypeNames {
     aggregateCategory: 'AggregateCategory'
     aggregateDonation: 'AggregateDonation'
     aggregateDonationAccount: 'AggregateDonationAccount'
+    aggregateImageGallery: 'AggregateImageGallery'
+    aggregateMember: 'AggregateMember'
     aggregateNews: 'AggregateNews'
     aggregateUser: 'AggregateUser'
     findFirstCategory: 'Category'
     findFirstDonation: 'Donation'
     findFirstDonationAccount: 'DonationAccount'
+    findFirstImageGallery: 'ImageGallery'
+    findFirstMember: 'Member'
     findFirstNews: 'News'
     findFirstUser: 'User'
     findManyCategory: 'Category'
@@ -3033,6 +3663,10 @@ export interface NexusGenFieldTypeNames {
     findManyDonationAccount: 'DonationAccount'
     findManyDonationAccountCount: 'Int'
     findManyDonationCount: 'Int'
+    findManyImageGallery: 'ImageGallery'
+    findManyImageGalleryCount: 'Int'
+    findManyMember: 'Member'
+    findManyMemberCount: 'Int'
     findManyNews: 'News'
     findManyNewsCount: 'Int'
     findManyUser: 'User'
@@ -3040,6 +3674,8 @@ export interface NexusGenFieldTypeNames {
     findUniqueCategory: 'Category'
     findUniqueDonation: 'Donation'
     findUniqueDonationAccount: 'DonationAccount'
+    findUniqueImageGallery: 'ImageGallery'
+    findUniqueMember: 'Member'
     findUniqueNews: 'News'
     findUniqueUser: 'User'
   }
@@ -3055,6 +3691,7 @@ export interface NexusGenFieldTypeNames {
     profilePicture: 'String'
     roles: 'Roles'
     showOnHomepage: 'Boolean'
+    updatedAt: 'DateTime'
   }
   UserAvgAggregateOutputType: { // field return type name
     id: 'Float'
@@ -3068,6 +3705,7 @@ export interface NexusGenFieldTypeNames {
     profilePicture: 'Int'
     roles: 'Int'
     showOnHomepage: 'Int'
+    updatedAt: 'Int'
   }
   UserCountOutputType: { // field return type name
     approvedDonations: 'Int'
@@ -3081,6 +3719,7 @@ export interface NexusGenFieldTypeNames {
     profilePicture: 'String'
     roles: 'Roles'
     showOnHomepage: 'Boolean'
+    updatedAt: 'DateTime'
   }
   UserMinAggregateOutputType: { // field return type name
     createdAt: 'DateTime'
@@ -3090,6 +3729,7 @@ export interface NexusGenFieldTypeNames {
     profilePicture: 'String'
     roles: 'Roles'
     showOnHomepage: 'Boolean'
+    updatedAt: 'DateTime'
   }
   UserSumAggregateOutputType: { // field return type name
     id: 'Int'
@@ -3127,6 +3767,12 @@ export interface NexusGenArgTypes {
     createOneDonationAccount: { // args
       data: NexusGenInputs['DonationAccountCreateInput']; // DonationAccountCreateInput!
     }
+    createOneImageGallery: { // args
+      data: NexusGenInputs['ImageGalleryCreateInput']; // ImageGalleryCreateInput!
+    }
+    createOneMember: { // args
+      data: NexusGenInputs['MemberCreateInput']; // MemberCreateInput!
+    }
     createOneNews: { // args
       data: NexusGenInputs['NewsCreateInput']; // NewsCreateInput!
     }
@@ -3142,6 +3788,12 @@ export interface NexusGenArgTypes {
     deleteManyDonationAccount: { // args
       where?: NexusGenInputs['DonationAccountWhereInput'] | null; // DonationAccountWhereInput
     }
+    deleteManyImageGallery: { // args
+      where?: NexusGenInputs['ImageGalleryWhereInput'] | null; // ImageGalleryWhereInput
+    }
+    deleteManyMember: { // args
+      where?: NexusGenInputs['MemberWhereInput'] | null; // MemberWhereInput
+    }
     deleteManyNews: { // args
       where?: NexusGenInputs['NewsWhereInput'] | null; // NewsWhereInput
     }
@@ -3156,6 +3808,12 @@ export interface NexusGenArgTypes {
     }
     deleteOneDonationAccount: { // args
       where: NexusGenInputs['DonationAccountWhereUniqueInput']; // DonationAccountWhereUniqueInput!
+    }
+    deleteOneImageGallery: { // args
+      where: NexusGenInputs['ImageGalleryWhereUniqueInput']; // ImageGalleryWhereUniqueInput!
+    }
+    deleteOneMember: { // args
+      where: NexusGenInputs['MemberWhereUniqueInput']; // MemberWhereUniqueInput!
     }
     deleteOneNews: { // args
       where: NexusGenInputs['NewsWhereUniqueInput']; // NewsWhereUniqueInput!
@@ -3174,6 +3832,14 @@ export interface NexusGenArgTypes {
     updateManyDonationAccount: { // args
       data: NexusGenInputs['DonationAccountUpdateManyMutationInput']; // DonationAccountUpdateManyMutationInput!
       where?: NexusGenInputs['DonationAccountWhereInput'] | null; // DonationAccountWhereInput
+    }
+    updateManyImageGallery: { // args
+      data: NexusGenInputs['ImageGalleryUpdateManyMutationInput']; // ImageGalleryUpdateManyMutationInput!
+      where?: NexusGenInputs['ImageGalleryWhereInput'] | null; // ImageGalleryWhereInput
+    }
+    updateManyMember: { // args
+      data: NexusGenInputs['MemberUpdateManyMutationInput']; // MemberUpdateManyMutationInput!
+      where?: NexusGenInputs['MemberWhereInput'] | null; // MemberWhereInput
     }
     updateManyNews: { // args
       data: NexusGenInputs['NewsUpdateManyMutationInput']; // NewsUpdateManyMutationInput!
@@ -3194,6 +3860,14 @@ export interface NexusGenArgTypes {
     updateOneDonationAccount: { // args
       data: NexusGenInputs['DonationAccountUpdateInput']; // DonationAccountUpdateInput!
       where: NexusGenInputs['DonationAccountWhereUniqueInput']; // DonationAccountWhereUniqueInput!
+    }
+    updateOneImageGallery: { // args
+      data: NexusGenInputs['ImageGalleryUpdateInput']; // ImageGalleryUpdateInput!
+      where: NexusGenInputs['ImageGalleryWhereUniqueInput']; // ImageGalleryWhereUniqueInput!
+    }
+    updateOneMember: { // args
+      data: NexusGenInputs['MemberUpdateInput']; // MemberUpdateInput!
+      where: NexusGenInputs['MemberWhereUniqueInput']; // MemberWhereUniqueInput!
     }
     updateOneNews: { // args
       data: NexusGenInputs['NewsUpdateInput']; // NewsUpdateInput!
@@ -3217,6 +3891,16 @@ export interface NexusGenArgTypes {
       create: NexusGenInputs['DonationAccountCreateInput']; // DonationAccountCreateInput!
       update: NexusGenInputs['DonationAccountUpdateInput']; // DonationAccountUpdateInput!
       where: NexusGenInputs['DonationAccountWhereUniqueInput']; // DonationAccountWhereUniqueInput!
+    }
+    upsertOneImageGallery: { // args
+      create: NexusGenInputs['ImageGalleryCreateInput']; // ImageGalleryCreateInput!
+      update: NexusGenInputs['ImageGalleryUpdateInput']; // ImageGalleryUpdateInput!
+      where: NexusGenInputs['ImageGalleryWhereUniqueInput']; // ImageGalleryWhereUniqueInput!
+    }
+    upsertOneMember: { // args
+      create: NexusGenInputs['MemberCreateInput']; // MemberCreateInput!
+      update: NexusGenInputs['MemberUpdateInput']; // MemberUpdateInput!
+      where: NexusGenInputs['MemberWhereUniqueInput']; // MemberWhereUniqueInput!
     }
     upsertOneNews: { // args
       create: NexusGenInputs['NewsCreateInput']; // NewsCreateInput!
@@ -3261,6 +3945,20 @@ export interface NexusGenArgTypes {
       take?: number | null; // Int
       where?: NexusGenInputs['DonationAccountWhereInput'] | null; // DonationAccountWhereInput
     }
+    aggregateImageGallery: { // args
+      cursor?: NexusGenInputs['ImageGalleryWhereUniqueInput'] | null; // ImageGalleryWhereUniqueInput
+      orderBy?: Array<NexusGenInputs['ImageGalleryOrderByWithRelationInput'] | null> | null; // [ImageGalleryOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['ImageGalleryWhereInput'] | null; // ImageGalleryWhereInput
+    }
+    aggregateMember: { // args
+      cursor?: NexusGenInputs['MemberWhereUniqueInput'] | null; // MemberWhereUniqueInput
+      orderBy?: Array<NexusGenInputs['MemberOrderByWithRelationInput'] | null> | null; // [MemberOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['MemberWhereInput'] | null; // MemberWhereInput
+    }
     aggregateNews: { // args
       cursor?: NexusGenInputs['NewsWhereUniqueInput'] | null; // NewsWhereUniqueInput
       orderBy?: Array<NexusGenInputs['NewsOrderByWithRelationInput'] | null> | null; // [NewsOrderByWithRelationInput]
@@ -3298,6 +3996,22 @@ export interface NexusGenArgTypes {
       skip?: number | null; // Int
       take?: number | null; // Int
       where?: NexusGenInputs['DonationAccountWhereInput'] | null; // DonationAccountWhereInput
+    }
+    findFirstImageGallery: { // args
+      cursor?: NexusGenInputs['ImageGalleryWhereUniqueInput'] | null; // ImageGalleryWhereUniqueInput
+      distinct?: Array<NexusGenEnums['ImageGalleryScalarFieldEnum'] | null> | null; // [ImageGalleryScalarFieldEnum]
+      orderBy?: Array<NexusGenInputs['ImageGalleryOrderByWithRelationInput'] | null> | null; // [ImageGalleryOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['ImageGalleryWhereInput'] | null; // ImageGalleryWhereInput
+    }
+    findFirstMember: { // args
+      cursor?: NexusGenInputs['MemberWhereUniqueInput'] | null; // MemberWhereUniqueInput
+      distinct?: Array<NexusGenEnums['MemberScalarFieldEnum'] | null> | null; // [MemberScalarFieldEnum]
+      orderBy?: Array<NexusGenInputs['MemberOrderByWithRelationInput'] | null> | null; // [MemberOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['MemberWhereInput'] | null; // MemberWhereInput
     }
     findFirstNews: { // args
       cursor?: NexusGenInputs['NewsWhereUniqueInput'] | null; // NewsWhereUniqueInput
@@ -3363,6 +4077,38 @@ export interface NexusGenArgTypes {
       take?: number | null; // Int
       where?: NexusGenInputs['DonationWhereInput'] | null; // DonationWhereInput
     }
+    findManyImageGallery: { // args
+      cursor?: NexusGenInputs['ImageGalleryWhereUniqueInput'] | null; // ImageGalleryWhereUniqueInput
+      distinct?: Array<NexusGenEnums['ImageGalleryScalarFieldEnum'] | null> | null; // [ImageGalleryScalarFieldEnum]
+      orderBy?: Array<NexusGenInputs['ImageGalleryOrderByWithRelationInput'] | null> | null; // [ImageGalleryOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['ImageGalleryWhereInput'] | null; // ImageGalleryWhereInput
+    }
+    findManyImageGalleryCount: { // args
+      cursor?: NexusGenInputs['ImageGalleryWhereUniqueInput'] | null; // ImageGalleryWhereUniqueInput
+      distinct?: Array<NexusGenEnums['ImageGalleryScalarFieldEnum'] | null> | null; // [ImageGalleryScalarFieldEnum]
+      orderBy?: Array<NexusGenInputs['ImageGalleryOrderByWithRelationInput'] | null> | null; // [ImageGalleryOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['ImageGalleryWhereInput'] | null; // ImageGalleryWhereInput
+    }
+    findManyMember: { // args
+      cursor?: NexusGenInputs['MemberWhereUniqueInput'] | null; // MemberWhereUniqueInput
+      distinct?: Array<NexusGenEnums['MemberScalarFieldEnum'] | null> | null; // [MemberScalarFieldEnum]
+      orderBy?: Array<NexusGenInputs['MemberOrderByWithRelationInput'] | null> | null; // [MemberOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['MemberWhereInput'] | null; // MemberWhereInput
+    }
+    findManyMemberCount: { // args
+      cursor?: NexusGenInputs['MemberWhereUniqueInput'] | null; // MemberWhereUniqueInput
+      distinct?: Array<NexusGenEnums['MemberScalarFieldEnum'] | null> | null; // [MemberScalarFieldEnum]
+      orderBy?: Array<NexusGenInputs['MemberOrderByWithRelationInput'] | null> | null; // [MemberOrderByWithRelationInput]
+      skip?: number | null; // Int
+      take?: number | null; // Int
+      where?: NexusGenInputs['MemberWhereInput'] | null; // MemberWhereInput
+    }
     findManyNews: { // args
       cursor?: NexusGenInputs['NewsWhereUniqueInput'] | null; // NewsWhereUniqueInput
       distinct?: Array<NexusGenEnums['NewsScalarFieldEnum'] | null> | null; // [NewsScalarFieldEnum]
@@ -3403,6 +4149,12 @@ export interface NexusGenArgTypes {
     }
     findUniqueDonationAccount: { // args
       where: NexusGenInputs['DonationAccountWhereUniqueInput']; // DonationAccountWhereUniqueInput!
+    }
+    findUniqueImageGallery: { // args
+      where: NexusGenInputs['ImageGalleryWhereUniqueInput']; // ImageGalleryWhereUniqueInput!
+    }
+    findUniqueMember: { // args
+      where: NexusGenInputs['MemberWhereUniqueInput']; // MemberWhereUniqueInput!
     }
     findUniqueNews: { // args
       where: NexusGenInputs['NewsWhereUniqueInput']; // NewsWhereUniqueInput!
