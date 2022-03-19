@@ -5,7 +5,8 @@
     "license": "MIT",
     "scripts": {
         "start": "tsc && node dist/server.js",
-        "dev": "ts-node-dev --transpile-only server.ts"
+        "dev": "ts-node-dev --transpile-only server.ts",
+        "seed": "ts-node-dev --transpile-only seed.ts"
     },
     "dependencies": {
         "@paljs/cli": "^4.0.17",

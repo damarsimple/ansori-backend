@@ -1,3 +1,5 @@
+export * from './ImageGallery'
+export * from './Member'
 export * from './Donation'
 export * from './DonationAccount'
 export * from './Category'

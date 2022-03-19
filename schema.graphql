@@ -71,6 +71,7 @@ type Category {
   id: Int!
   name: String!
   news(cursor: NewsWhereUniqueInput, distinct: NewsScalarFieldEnum, orderBy: NewsOrderByWithRelationInput, skip: Int, take: Int, where: NewsWhereInput): [News!]!
+  slug: String!
 }
 
 type CategoryAvgAggregateOutputType {
@@ -85,11 +86,13 @@ type CategoryCountAggregateOutputType {
   _all: Int!
   id: Int!
   name: Int!
+  slug: Int!
 }
 
 input CategoryCountOrderByAggregateInput {
   id: SortOrder
   name: SortOrder
+  slug: SortOrder
 }
 
 type CategoryCountOutputType {
@@ -99,11 +102,13 @@ type CategoryCountOutputType {
 input CategoryCreateInput {
   name: String!
   news: NewsCreateNestedManyWithoutCategoriesInput
+  slug: String!
 }
 
 input CategoryCreateManyInput {
   id: Int
   name: String!
+  slug: String!
 }
 
 input CategoryCreateNestedManyWithoutNewsInput {
@@ -119,6 +124,7 @@ input CategoryCreateOrConnectWithoutNewsInput {
 
 input CategoryCreateWithoutNewsInput {
   name: String!
+  slug: String!
 }
 
 input CategoryListRelationFilter {
@@ -130,21 +136,25 @@ input CategoryListRelationFilter {
 type CategoryMaxAggregateOutputType {
   id: Int
   name: String
+  slug: String
 }
 
 input CategoryMaxOrderByAggregateInput {
   id: SortOrder
   name: SortOrder
+  slug: SortOrder
 }
 
 type CategoryMinAggregateOutputType {
   id: Int
   name: String
+  slug: String
 }
 
 input CategoryMinOrderByAggregateInput {
   id: SortOrder
   name: SortOrder
+  slug: SortOrder
 }
 
 input CategoryOrderByRelationAggregateInput {
@@ -159,17 +169,20 @@ input CategoryOrderByWithAggregationInput {
   _sum: CategorySumOrderByAggregateInput
   id: SortOrder
   name: SortOrder
+  slug: SortOrder
 }
 
 input CategoryOrderByWithRelationInput {
   id: SortOrder
   name: SortOrder
   news: NewsOrderByRelationAggregateInput
+  slug: SortOrder
 }
 
 enum CategoryScalarFieldEnum {
   id
   name
+  slug
 }
 
 input CategoryScalarWhereInput {
@@ -178,6 +191,7 @@ input CategoryScalarWhereInput {
   OR: [CategoryScalarWhereInput]
   id: IntFilter
   name: StringFilter
+  slug: StringFilter
 }
 
 input CategoryScalarWhereWithAggregatesInput {
@@ -186,6 +200,7 @@ input CategoryScalarWhereWithAggregatesInput {
   OR: [CategoryScalarWhereWithAggregatesInput]
   id: IntWithAggregatesFilter
   name: StringWithAggregatesFilter
+  slug: StringWithAggregatesFilter
 }
 
 type CategorySumAggregateOutputType {
@@ -200,6 +215,7 @@ input CategoryUncheckedCreateInput {
   id: Int
   name: String!
   news: NewsUncheckedCreateNestedManyWithoutCategoriesInput
+  slug: String!
 }
 
 input CategoryUncheckedCreateNestedManyWithoutNewsInput {
@@ -211,22 +227,26 @@ input CategoryUncheckedCreateNestedManyWithoutNewsInput {
 input CategoryUncheckedCreateWithoutNewsInput {
   id: Int
   name: String!
+  slug: String!
 }
 
 input CategoryUncheckedUpdateInput {
   id: IntFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   news: NewsUncheckedUpdateManyWithoutCategoriesInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUncheckedUpdateManyInput {
   id: IntFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUncheckedUpdateManyWithoutCategoriesInput {
   id: IntFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUncheckedUpdateManyWithoutNewsInput {
@@ -245,15 +265,18 @@ input CategoryUncheckedUpdateManyWithoutNewsInput {
 input CategoryUncheckedUpdateWithoutNewsInput {
   id: IntFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUpdateInput {
   name: StringFieldUpdateOperationsInput
   news: NewsUpdateManyWithoutCategoriesInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUpdateManyMutationInput {
   name: StringFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUpdateManyWithWhereWithoutNewsInput {
@@ -281,6 +304,7 @@ input CategoryUpdateWithWhereUniqueWithoutNewsInput {
 
 input CategoryUpdateWithoutNewsInput {
   name: StringFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
 }
 
 input CategoryUpsertWithWhereUniqueWithoutNewsInput {
@@ -296,10 +320,12 @@ input CategoryWhereInput {
   id: IntFilter
   name: StringFilter
   news: NewsListRelationFilter
+  slug: StringFilter
 }
 
 input CategoryWhereUniqueInput {
   id: Int
+  slug: String
 }
 
 """Date custom scalar type"""
@@ -1569,19 +1595,23 @@ type News {
   id: Int!
   potrait: String
   published: Boolean!
+  slug: String!
   title: String!
   updatedAt: DateTime!
+  views: Int!
   wide: String
 }
 
 type NewsAvgAggregateOutputType {
   authorId: Float
   id: Float
+  views: Float
 }
 
 input NewsAvgOrderByAggregateInput {
   authorId: SortOrder
   id: SortOrder
+  views: SortOrder
 }
 
 type NewsCountAggregateOutputType {
@@ -1593,8 +1623,10 @@ type NewsCountAggregateOutputType {
   id: Int!
   potrait: Int!
   published: Int!
+  slug: Int!
   title: Int!
   updatedAt: Int!
+  views: Int!
   wide: Int!
 }
 
@@ -1606,8 +1638,10 @@ input NewsCountOrderByAggregateInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
+  views: SortOrder
   wide: SortOrder
 }
 
@@ -1623,8 +1657,10 @@ input NewsCreateInput {
   description: String
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1635,8 +1671,10 @@ input NewsCreateManyAuthorInput {
   id: Int
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1653,8 +1691,10 @@ input NewsCreateManyInput {
   id: Int
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1688,8 +1728,10 @@ input NewsCreateWithoutAuthorInput {
   description: String
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1700,8 +1742,10 @@ input NewsCreateWithoutCategoriesInput {
   description: String
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1719,8 +1763,10 @@ type NewsMaxAggregateOutputType {
   id: Int
   potrait: String
   published: Boolean
+  slug: String
   title: String
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1732,8 +1778,10 @@ input NewsMaxOrderByAggregateInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
+  views: SortOrder
   wide: SortOrder
 }
 
@@ -1745,8 +1793,10 @@ type NewsMinAggregateOutputType {
   id: Int
   potrait: String
   published: Boolean
+  slug: String
   title: String
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1758,8 +1808,10 @@ input NewsMinOrderByAggregateInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
+  views: SortOrder
   wide: SortOrder
 }
 
@@ -1780,8 +1832,10 @@ input NewsOrderByWithAggregationInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
+  views: SortOrder
   wide: SortOrder
 }
 
@@ -1795,8 +1849,10 @@ input NewsOrderByWithRelationInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
+  views: SortOrder
   wide: SortOrder
 }
 
@@ -1808,8 +1864,10 @@ enum NewsScalarFieldEnum {
   id
   potrait
   published
+  slug
   title
   updatedAt
+  views
   wide
 }
 
@@ -1824,8 +1882,10 @@ input NewsScalarWhereInput {
   id: IntFilter
   potrait: StringNullableFilter
   published: BoolFilter
+  slug: StringFilter
   title: StringFilter
   updatedAt: DateTimeFilter
+  views: IntFilter
   wide: StringNullableFilter
 }
 
@@ -1840,19 +1900,23 @@ input NewsScalarWhereWithAggregatesInput {
   id: IntWithAggregatesFilter
   potrait: StringNullableWithAggregatesFilter
   published: BoolWithAggregatesFilter
+  slug: StringWithAggregatesFilter
   title: StringWithAggregatesFilter
   updatedAt: DateTimeWithAggregatesFilter
+  views: IntWithAggregatesFilter
   wide: StringNullableWithAggregatesFilter
 }
 
 type NewsSumAggregateOutputType {
   authorId: Int
   id: Int
+  views: Int
 }
 
 input NewsSumOrderByAggregateInput {
   authorId: SortOrder
   id: SortOrder
+  views: SortOrder
 }
 
 input NewsUncheckedCreateInput {
@@ -1864,8 +1928,10 @@ input NewsUncheckedCreateInput {
   id: Int
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1890,8 +1956,10 @@ input NewsUncheckedCreateWithoutAuthorInput {
   id: Int
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1903,8 +1971,10 @@ input NewsUncheckedCreateWithoutCategoriesInput {
   id: Int
   potrait: String
   published: Boolean
+  slug: String!
   title: String!
   updatedAt: DateTime
+  views: Int
   wide: String
 }
 
@@ -1917,8 +1987,10 @@ input NewsUncheckedUpdateInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -1930,8 +2002,10 @@ input NewsUncheckedUpdateManyInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -1969,8 +2043,10 @@ input NewsUncheckedUpdateManyWithoutNewsInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -1982,8 +2058,10 @@ input NewsUncheckedUpdateWithoutAuthorInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -1995,8 +2073,10 @@ input NewsUncheckedUpdateWithoutCategoriesInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -2008,8 +2088,10 @@ input NewsUpdateInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -2019,8 +2101,10 @@ input NewsUpdateManyMutationInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -2078,8 +2162,10 @@ input NewsUpdateWithoutAuthorInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -2090,8 +2176,10 @@ input NewsUpdateWithoutCategoriesInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
+  views: IntFieldUpdateOperationsInput
   wide: NullableStringFieldUpdateOperationsInput
 }
 
@@ -2120,13 +2208,16 @@ input NewsWhereInput {
   id: IntFilter
   potrait: StringNullableFilter
   published: BoolFilter
+  slug: StringFilter
   title: StringFilter
   updatedAt: DateTimeFilter
+  views: IntFilter
   wide: StringNullableFilter
 }
 
 input NewsWhereUniqueInput {
   id: Int
+  slug: String
 }
 
 input NullableIntFieldUpdateOperationsInput {

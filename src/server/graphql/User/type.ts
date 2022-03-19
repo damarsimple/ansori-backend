@@ -8,7 +8,6 @@ export const User = objectType({
   name: 'User',
   definition(t) {
     t.int('id')
-    t.field('createdAt', { type: 'DateTime' })
     t.string('email')
     t.nullable.string('name')
     t.nullable.string('profilePicture')
@@ -43,6 +42,8 @@ export const User = objectType({
     })
     t.boolean('showOnHomepage')
     t.field('roles', { type: 'Roles' })
+    t.field('createdAt', { type: 'DateTime' })
+    t.field('updatedAt', { type: 'DateTime' })
     t.field('_count', {
       type: 'UserCountOutputType',
       resolve(root: any) {

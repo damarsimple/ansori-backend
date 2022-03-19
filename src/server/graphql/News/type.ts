@@ -17,6 +17,7 @@ export const News = objectType({
       },
     })
     t.nullable.int('authorId')
+    t.string('slug')
     t.list.field('categories', {
       type: 'Category',
       args: {
@@ -33,6 +34,7 @@ export const News = objectType({
     })
     t.field('createdAt', { type: 'DateTime' })
     t.field('updatedAt', { type: 'DateTime' })
+    t.int('views')
     t.nullable.string('potrait')
     t.nullable.string('wide')
     t.string('content')

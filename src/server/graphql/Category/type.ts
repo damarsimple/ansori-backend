@@ -9,6 +9,7 @@ export const Category = objectType({
   definition(t) {
     t.int('id')
     t.string('name')
+    t.string('slug')
     t.list.field('news', {
       type: 'News',
       args: {

@@ -13,18 +13,22 @@ async function main() {
         }
     })
 
+    let index = 0
 
     for (const name of ["Zakat", "Puasa", "Lebaran", "Acara", "Donasi", "Sedekah", "Yatim Piatu"]) {
         await prisma.category.create({
             data: {
                 name,
+                slug: `${name.toLowerCase().replace(/\s/g, "-")}-${index}`
             }
         })
+        index++;
     }
     const categories = await prisma.category.findMany();
     const connect = categories.map(e => ({
         id: e.id
     }))
+
 
     for (let i = 0; i < 100; i++) {
         await prisma.news.create({
@@ -37,6 +41,8 @@ async function main() {
                 categories: {
                     connect
                 }
+                ,
+                slug: `test-${i}`
             }
         })
 
