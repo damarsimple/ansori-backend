@@ -11,6 +11,7 @@ export const User = objectType({
     t.field('createdAt', { type: 'DateTime' })
     t.string('email')
     t.nullable.string('name')
+    t.nullable.string('profilePicture')
     t.string('password')
     t.list.field('news', {
       type: 'News',
@@ -26,7 +27,6 @@ export const User = objectType({
         return root.news
       },
     })
-    t.nullable.int('groupId')
     t.list.field('approvedDonations', {
       type: 'Donation',
       args: {
@@ -42,7 +42,6 @@ export const User = objectType({
       },
     })
     t.boolean('showOnHomepage')
-    t.boolean('isAdmin')
     t.field('roles', { type: 'Roles' })
     t.field('_count', {
       type: 'UserCountOutputType',

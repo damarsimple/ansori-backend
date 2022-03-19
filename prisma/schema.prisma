@@ -19,12 +19,11 @@ model User {
   createdAt         DateTime   @default(now())
   email             String     @unique
   name              String?
+  profilePicture    String?
   password          String
   news              News[]
-  groupId           Int?
   approvedDonations Donation[]
   showOnHomepage    Boolean    @default(false)
-  isAdmin           Boolean    @default(false)
   roles             Roles
 }
 
@@ -37,6 +36,11 @@ model News {
   categories Category[]
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
+
+  potrait     String?
+  wide        String?
+  content     String
+  description String?
 
 }
 
@@ -64,6 +68,7 @@ enum DonationStatus {
 model Donation {
   id        Int             @id @default(autoincrement())
   name      String
+  message   String?
   amount    Float
   accountId Int
   account   DonationAccount @relation(fields: [accountId], onDelete: Cascade, references: [id])

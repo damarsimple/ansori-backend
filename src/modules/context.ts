@@ -21,7 +21,6 @@ export const prisma = new PrismaClient({
 
 
 
-console.log(prisma)
 
 export const context = {
     prisma,

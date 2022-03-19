@@ -33,6 +33,10 @@ export const News = objectType({
     })
     t.field('createdAt', { type: 'DateTime' })
     t.field('updatedAt', { type: 'DateTime' })
+    t.nullable.string('potrait')
+    t.nullable.string('wide')
+    t.string('content')
+    t.nullable.string('description')
     t.field('_count', {
       type: 'NewsCountOutputType',
       resolve(root: any) {

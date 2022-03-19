@@ -439,6 +439,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    message?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
     status?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -448,6 +449,7 @@ export interface NexusGenInputs {
     amount: number; // Float!
     approvedBy?: NexusGenInputs['UserCreateNestedOneWithoutApprovedDonationsInput'] | null; // UserCreateNestedOneWithoutApprovedDonationsInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -457,6 +459,7 @@ export interface NexusGenInputs {
     approvedById?: number | null; // Int
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -470,6 +473,7 @@ export interface NexusGenInputs {
     amount: number; // Float!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -484,6 +488,7 @@ export interface NexusGenInputs {
     approvedById?: number | null; // Int
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -512,6 +517,7 @@ export interface NexusGenInputs {
     amount: number; // Float!
     approvedBy?: NexusGenInputs['UserCreateNestedOneWithoutApprovedDonationsInput'] | null; // UserCreateNestedOneWithoutApprovedDonationsInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -520,6 +526,7 @@ export interface NexusGenInputs {
     account: NexusGenInputs['DonationAccountCreateNestedOneWithoutDonationsInput']; // DonationAccountCreateNestedOneWithoutDonationsInput!
     amount: number; // Float!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -535,6 +542,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    message?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
     status?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -545,6 +553,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    message?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
     status?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -563,6 +572,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    message?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
     status?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -575,6 +585,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    message?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
     status?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -588,6 +599,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    message?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     name?: NexusGenInputs['StringFilter'] | null; // StringFilter
     status?: NexusGenInputs['EnumDonationStatusFilter'] | null; // EnumDonationStatusFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
@@ -601,6 +613,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['IntNullableWithAggregatesFilter'] | null; // IntNullableWithAggregatesFilter
     createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
     id?: NexusGenInputs['IntWithAggregatesFilter'] | null; // IntWithAggregatesFilter
+    message?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
     name?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
     status?: NexusGenInputs['EnumDonationStatusWithAggregatesFilter'] | null; // EnumDonationStatusWithAggregatesFilter
     updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
@@ -617,6 +630,7 @@ export interface NexusGenInputs {
     approvedById?: number | null; // Int
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -638,6 +652,7 @@ export interface NexusGenInputs {
     approvedById?: number | null; // Int
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -647,6 +662,7 @@ export interface NexusGenInputs {
     amount: number; // Float!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -657,6 +673,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -667,6 +684,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -702,6 +720,7 @@ export interface NexusGenInputs {
     amount?: NexusGenInputs['FloatFieldUpdateOperationsInput'] | null; // FloatFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -711,6 +730,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -720,6 +740,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -729,6 +750,7 @@ export interface NexusGenInputs {
     amount?: NexusGenInputs['FloatFieldUpdateOperationsInput'] | null; // FloatFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -738,6 +760,7 @@ export interface NexusGenInputs {
     amount?: NexusGenInputs['FloatFieldUpdateOperationsInput'] | null; // FloatFieldUpdateOperationsInput
     approvedBy?: NexusGenInputs['UserUpdateOneWithoutApprovedDonationsInput'] | null; // UserUpdateOneWithoutApprovedDonationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -745,6 +768,7 @@ export interface NexusGenInputs {
   DonationUpdateManyMutationInput: { // input type
     amount?: NexusGenInputs['FloatFieldUpdateOperationsInput'] | null; // FloatFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -795,6 +819,7 @@ export interface NexusGenInputs {
     amount?: NexusGenInputs['FloatFieldUpdateOperationsInput'] | null; // FloatFieldUpdateOperationsInput
     approvedBy?: NexusGenInputs['UserUpdateOneWithoutApprovedDonationsInput'] | null; // UserUpdateOneWithoutApprovedDonationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -803,6 +828,7 @@ export interface NexusGenInputs {
     account?: NexusGenInputs['DonationAccountUpdateOneRequiredWithoutDonationsInput'] | null; // DonationAccountUpdateOneRequiredWithoutDonationsInput
     amount?: NexusGenInputs['FloatFieldUpdateOperationsInput'] | null; // FloatFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    message?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     status?: NexusGenInputs['EnumDonationStatusFieldUpdateOperationsInput'] | null; // EnumDonationStatusFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
@@ -828,6 +854,7 @@ export interface NexusGenInputs {
     approvedById?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    message?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     name?: NexusGenInputs['StringFilter'] | null; // StringFilter
     status?: NexusGenInputs['EnumDonationStatusFilter'] | null; // EnumDonationStatusFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
@@ -1173,26 +1200,38 @@ export interface NexusGenInputs {
   }
   NewsCountOrderByAggregateInput: { // input type
     authorId?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    content?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    potrait?: NexusGenEnums['SortOrder'] | null; // SortOrder
     published?: NexusGenEnums['SortOrder'] | null; // SortOrder
     title?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    wide?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   NewsCreateInput: { // input type
     author?: NexusGenInputs['UserCreateNestedOneWithoutNewsInput'] | null; // UserCreateNestedOneWithoutNewsInput
     categories?: NexusGenInputs['CategoryCreateNestedManyWithoutNewsInput'] | null; // CategoryCreateNestedManyWithoutNewsInput
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsCreateManyAuthorInput: { // input type
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsCreateManyAuthorInputEnvelope: { // input type
     data: NexusGenInputs['NewsCreateManyAuthorInput']; // NewsCreateManyAuthorInput!
@@ -1200,11 +1239,15 @@ export interface NexusGenInputs {
   }
   NewsCreateManyInput: { // input type
     authorId?: number | null; // Int
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsCreateNestedManyWithoutAuthorInput: { // input type
     connect?: Array<NexusGenInputs['NewsWhereUniqueInput'] | null> | null; // [NewsWhereUniqueInput]
@@ -1227,17 +1270,25 @@ export interface NexusGenInputs {
   }
   NewsCreateWithoutAuthorInput: { // input type
     categories?: NexusGenInputs['CategoryCreateNestedManyWithoutNewsInput'] | null; // CategoryCreateNestedManyWithoutNewsInput
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsCreateWithoutCategoriesInput: { // input type
     author?: NexusGenInputs['UserCreateNestedOneWithoutNewsInput'] | null; // UserCreateNestedOneWithoutNewsInput
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsListRelationFilter: { // input type
     every?: NexusGenInputs['NewsWhereInput'] | null; // NewsWhereInput
@@ -1246,19 +1297,27 @@ export interface NexusGenInputs {
   }
   NewsMaxOrderByAggregateInput: { // input type
     authorId?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    content?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    potrait?: NexusGenEnums['SortOrder'] | null; // SortOrder
     published?: NexusGenEnums['SortOrder'] | null; // SortOrder
     title?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    wide?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   NewsMinOrderByAggregateInput: { // input type
     authorId?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    content?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    potrait?: NexusGenEnums['SortOrder'] | null; // SortOrder
     published?: NexusGenEnums['SortOrder'] | null; // SortOrder
     title?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    wide?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   NewsOrderByRelationAggregateInput: { // input type
     _count?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -1270,43 +1329,59 @@ export interface NexusGenInputs {
     _min?: NexusGenInputs['NewsMinOrderByAggregateInput'] | null; // NewsMinOrderByAggregateInput
     _sum?: NexusGenInputs['NewsSumOrderByAggregateInput'] | null; // NewsSumOrderByAggregateInput
     authorId?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    content?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    potrait?: NexusGenEnums['SortOrder'] | null; // SortOrder
     published?: NexusGenEnums['SortOrder'] | null; // SortOrder
     title?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    wide?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   NewsOrderByWithRelationInput: { // input type
     author?: NexusGenInputs['UserOrderByWithRelationInput'] | null; // UserOrderByWithRelationInput
     authorId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     categories?: NexusGenInputs['CategoryOrderByRelationAggregateInput'] | null; // CategoryOrderByRelationAggregateInput
+    content?: NexusGenEnums['SortOrder'] | null; // SortOrder
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    description?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    potrait?: NexusGenEnums['SortOrder'] | null; // SortOrder
     published?: NexusGenEnums['SortOrder'] | null; // SortOrder
     title?: NexusGenEnums['SortOrder'] | null; // SortOrder
     updatedAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    wide?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   NewsScalarWhereInput: { // input type
     AND?: Array<NexusGenInputs['NewsScalarWhereInput'] | null> | null; // [NewsScalarWhereInput]
     NOT?: Array<NexusGenInputs['NewsScalarWhereInput'] | null> | null; // [NewsScalarWhereInput]
     OR?: Array<NexusGenInputs['NewsScalarWhereInput'] | null> | null; // [NewsScalarWhereInput]
     authorId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
+    content?: NexusGenInputs['StringFilter'] | null; // StringFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    description?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    potrait?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     published?: NexusGenInputs['BoolFilter'] | null; // BoolFilter
     title?: NexusGenInputs['StringFilter'] | null; // StringFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    wide?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
   }
   NewsScalarWhereWithAggregatesInput: { // input type
     AND?: Array<NexusGenInputs['NewsScalarWhereWithAggregatesInput'] | null> | null; // [NewsScalarWhereWithAggregatesInput]
     NOT?: Array<NexusGenInputs['NewsScalarWhereWithAggregatesInput'] | null> | null; // [NewsScalarWhereWithAggregatesInput]
     OR?: Array<NexusGenInputs['NewsScalarWhereWithAggregatesInput'] | null> | null; // [NewsScalarWhereWithAggregatesInput]
     authorId?: NexusGenInputs['IntNullableWithAggregatesFilter'] | null; // IntNullableWithAggregatesFilter
+    content?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
     createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
+    description?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
     id?: NexusGenInputs['IntWithAggregatesFilter'] | null; // IntWithAggregatesFilter
+    potrait?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
     published?: NexusGenInputs['BoolWithAggregatesFilter'] | null; // BoolWithAggregatesFilter
     title?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
     updatedAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
+    wide?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
   }
   NewsSumOrderByAggregateInput: { // input type
     authorId?: NexusGenEnums['SortOrder'] | null; // SortOrder
@@ -1315,11 +1390,15 @@ export interface NexusGenInputs {
   NewsUncheckedCreateInput: { // input type
     authorId?: number | null; // Int
     categories?: NexusGenInputs['CategoryUncheckedCreateNestedManyWithoutNewsInput'] | null; // CategoryUncheckedCreateNestedManyWithoutNewsInput
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsUncheckedCreateNestedManyWithoutAuthorInput: { // input type
     connect?: Array<NexusGenInputs['NewsWhereUniqueInput'] | null> | null; // [NewsWhereUniqueInput]
@@ -1334,36 +1413,52 @@ export interface NexusGenInputs {
   }
   NewsUncheckedCreateWithoutAuthorInput: { // input type
     categories?: NexusGenInputs['CategoryUncheckedCreateNestedManyWithoutNewsInput'] | null; // CategoryUncheckedCreateNestedManyWithoutNewsInput
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsUncheckedCreateWithoutCategoriesInput: { // input type
     authorId?: number | null; // Int
+    content: string; // String!
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title: string; // String!
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsUncheckedUpdateInput: { // input type
     authorId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     categories?: NexusGenInputs['CategoryUncheckedUpdateManyWithoutNewsInput'] | null; // CategoryUncheckedUpdateManyWithoutNewsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUncheckedUpdateManyInput: { // input type
     authorId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUncheckedUpdateManyWithoutAuthorInput: { // input type
     connect?: Array<NexusGenInputs['NewsWhereUniqueInput'] | null> | null; // [NewsWhereUniqueInput]
@@ -1391,41 +1486,61 @@ export interface NexusGenInputs {
     upsert?: Array<NexusGenInputs['NewsUpsertWithWhereUniqueWithoutCategoriesInput'] | null> | null; // [NewsUpsertWithWhereUniqueWithoutCategoriesInput]
   }
   NewsUncheckedUpdateManyWithoutNewsInput: { // input type
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUncheckedUpdateWithoutAuthorInput: { // input type
     categories?: NexusGenInputs['CategoryUncheckedUpdateManyWithoutNewsInput'] | null; // CategoryUncheckedUpdateManyWithoutNewsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUncheckedUpdateWithoutCategoriesInput: { // input type
     authorId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUpdateInput: { // input type
     author?: NexusGenInputs['UserUpdateOneWithoutNewsInput'] | null; // UserUpdateOneWithoutNewsInput
     categories?: NexusGenInputs['CategoryUpdateManyWithoutNewsInput'] | null; // CategoryUpdateManyWithoutNewsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUpdateManyMutationInput: { // input type
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUpdateManyWithWhereWithoutAuthorInput: { // input type
     data: NexusGenInputs['NewsUncheckedUpdateManyWithoutNewsInput']; // NewsUncheckedUpdateManyWithoutNewsInput!
@@ -1470,17 +1585,25 @@ export interface NexusGenInputs {
   }
   NewsUpdateWithoutAuthorInput: { // input type
     categories?: NexusGenInputs['CategoryUpdateManyWithoutNewsInput'] | null; // CategoryUpdateManyWithoutNewsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUpdateWithoutCategoriesInput: { // input type
     author?: NexusGenInputs['UserUpdateOneWithoutNewsInput'] | null; // UserUpdateOneWithoutNewsInput
+    content?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    potrait?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     published?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     title?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     updatedAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    wide?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
   NewsUpsertWithWhereUniqueWithoutAuthorInput: { // input type
     create: NexusGenInputs['NewsUncheckedCreateWithoutAuthorInput']; // NewsUncheckedCreateWithoutAuthorInput!
@@ -1499,11 +1622,15 @@ export interface NexusGenInputs {
     author?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
     authorId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     categories?: NexusGenInputs['CategoryListRelationFilter'] | null; // CategoryListRelationFilter
+    content?: NexusGenInputs['StringFilter'] | null; // StringFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    description?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    potrait?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     published?: NexusGenInputs['BoolFilter'] | null; // BoolFilter
     title?: NexusGenInputs['StringFilter'] | null; // StringFilter
     updatedAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    wide?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
   }
   NewsWhereUniqueInput: { // input type
     id?: number | null; // Int
@@ -1584,16 +1711,14 @@ export interface NexusGenInputs {
     startsWith?: string | null; // String
   }
   UserAvgOrderByAggregateInput: { // input type
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserCountOrderByAggregateInput: { // input type
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     email?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    isAdmin?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
@@ -1601,20 +1726,18 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationCreateNestedManyWithoutApprovedByInput'] | null; // DonationCreateNestedManyWithoutApprovedByInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
     news?: NexusGenInputs['NewsCreateNestedManyWithoutAuthorInput'] | null; // NewsCreateNestedManyWithoutAuthorInput
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
   UserCreateManyInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
     id?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
@@ -1639,10 +1762,9 @@ export interface NexusGenInputs {
   UserCreateWithoutApprovedDonationsInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
     news?: NexusGenInputs['NewsCreateNestedManyWithoutAuthorInput'] | null; // NewsCreateNestedManyWithoutAuthorInput
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
@@ -1650,29 +1772,26 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationCreateNestedManyWithoutApprovedByInput'] | null; // DonationCreateNestedManyWithoutApprovedByInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
   UserMaxOrderByAggregateInput: { // input type
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     email?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    isAdmin?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserMinOrderByAggregateInput: { // input type
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     email?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    isAdmin?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
@@ -1684,10 +1803,9 @@ export interface NexusGenInputs {
     _sum?: NexusGenInputs['UserSumOrderByAggregateInput'] | null; // UserSumOrderByAggregateInput
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     email?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    isAdmin?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
+    profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
@@ -1695,11 +1813,10 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationOrderByRelationAggregateInput'] | null; // DonationOrderByRelationAggregateInput
     createdAt?: NexusGenEnums['SortOrder'] | null; // SortOrder
     email?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    isAdmin?: NexusGenEnums['SortOrder'] | null; // SortOrder
     name?: NexusGenEnums['SortOrder'] | null; // SortOrder
     news?: NexusGenInputs['NewsOrderByRelationAggregateInput'] | null; // NewsOrderByRelationAggregateInput
+    profilePicture?: NexusGenEnums['SortOrder'] | null; // SortOrder
     roles?: NexusGenEnums['SortOrder'] | null; // SortOrder
     showOnHomepage?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
@@ -1713,37 +1830,33 @@ export interface NexusGenInputs {
     OR?: Array<NexusGenInputs['UserScalarWhereWithAggregatesInput'] | null> | null; // [UserScalarWhereWithAggregatesInput]
     createdAt?: NexusGenInputs['DateTimeWithAggregatesFilter'] | null; // DateTimeWithAggregatesFilter
     email?: NexusGenInputs['StringWithAggregatesFilter'] | null; // StringWithAggregatesFilter
-    groupId?: NexusGenInputs['IntNullableWithAggregatesFilter'] | null; // IntNullableWithAggregatesFilter
     id?: NexusGenInputs['IntWithAggregatesFilter'] | null; // IntWithAggregatesFilter
-    isAdmin?: NexusGenInputs['BoolWithAggregatesFilter'] | null; // BoolWithAggregatesFilter
     name?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
+    profilePicture?: NexusGenInputs['StringNullableWithAggregatesFilter'] | null; // StringNullableWithAggregatesFilter
     roles?: NexusGenInputs['EnumRolesWithAggregatesFilter'] | null; // EnumRolesWithAggregatesFilter
     showOnHomepage?: NexusGenInputs['BoolWithAggregatesFilter'] | null; // BoolWithAggregatesFilter
   }
   UserSumOrderByAggregateInput: { // input type
-    groupId?: NexusGenEnums['SortOrder'] | null; // SortOrder
     id?: NexusGenEnums['SortOrder'] | null; // SortOrder
   }
   UserUncheckedCreateInput: { // input type
     approvedDonations?: NexusGenInputs['DonationUncheckedCreateNestedManyWithoutApprovedByInput'] | null; // DonationUncheckedCreateNestedManyWithoutApprovedByInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
     id?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
     news?: NexusGenInputs['NewsUncheckedCreateNestedManyWithoutAuthorInput'] | null; // NewsUncheckedCreateNestedManyWithoutAuthorInput
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
   UserUncheckedCreateWithoutApprovedDonationsInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
     id?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
     news?: NexusGenInputs['NewsUncheckedCreateNestedManyWithoutAuthorInput'] | null; // NewsUncheckedCreateNestedManyWithoutAuthorInput
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
@@ -1751,10 +1864,9 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationUncheckedCreateNestedManyWithoutApprovedByInput'] | null; // DonationUncheckedCreateNestedManyWithoutApprovedByInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
-    groupId?: number | null; // Int
     id?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage?: boolean | null; // Boolean
   }
@@ -1762,32 +1874,29 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationUncheckedUpdateManyWithoutApprovedByInput'] | null; // DonationUncheckedUpdateManyWithoutApprovedByInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     news?: NexusGenInputs['NewsUncheckedUpdateManyWithoutAuthorInput'] | null; // NewsUncheckedUpdateManyWithoutAuthorInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
   UserUncheckedUpdateManyInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
   UserUncheckedUpdateWithoutApprovedDonationsInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     news?: NexusGenInputs['NewsUncheckedUpdateManyWithoutAuthorInput'] | null; // NewsUncheckedUpdateManyWithoutAuthorInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
@@ -1795,10 +1904,9 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationUncheckedUpdateManyWithoutApprovedByInput'] | null; // DonationUncheckedUpdateManyWithoutApprovedByInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
     id?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
@@ -1806,19 +1914,17 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationUpdateManyWithoutApprovedByInput'] | null; // DonationUpdateManyWithoutApprovedByInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     news?: NexusGenInputs['NewsUpdateManyWithoutAuthorInput'] | null; // NewsUpdateManyWithoutAuthorInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
   UserUpdateManyMutationInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
@@ -1843,10 +1949,9 @@ export interface NexusGenInputs {
   UserUpdateWithoutApprovedDonationsInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     news?: NexusGenInputs['NewsUpdateManyWithoutAuthorInput'] | null; // NewsUpdateManyWithoutAuthorInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
@@ -1854,9 +1959,8 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationUpdateManyWithoutApprovedByInput'] | null; // DonationUpdateManyWithoutApprovedByInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    groupId?: NexusGenInputs['NullableIntFieldUpdateOperationsInput'] | null; // NullableIntFieldUpdateOperationsInput
-    isAdmin?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    profilePicture?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     roles?: NexusGenInputs['EnumRolesFieldUpdateOperationsInput'] | null; // EnumRolesFieldUpdateOperationsInput
     showOnHomepage?: NexusGenInputs['BoolFieldUpdateOperationsInput'] | null; // BoolFieldUpdateOperationsInput
   }
@@ -1875,11 +1979,10 @@ export interface NexusGenInputs {
     approvedDonations?: NexusGenInputs['DonationListRelationFilter'] | null; // DonationListRelationFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
     email?: NexusGenInputs['StringFilter'] | null; // StringFilter
-    groupId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
-    isAdmin?: NexusGenInputs['BoolFilter'] | null; // BoolFilter
     name?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     news?: NexusGenInputs['NewsListRelationFilter'] | null; // NewsListRelationFilter
+    profilePicture?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     roles?: NexusGenInputs['EnumRolesFilter'] | null; // EnumRolesFilter
     showOnHomepage?: NexusGenInputs['BoolFilter'] | null; // BoolFilter
   }
@@ -1892,13 +1995,13 @@ export interface NexusGenInputs {
 export interface NexusGenEnums {
   CategoryScalarFieldEnum: "id" | "name"
   DonationAccountScalarFieldEnum: "accountNumber" | "bankName" | "id" | "logoUrl" | "name"
-  DonationScalarFieldEnum: "accountId" | "amount" | "approvedById" | "createdAt" | "id" | "name" | "status" | "updatedAt"
+  DonationScalarFieldEnum: "accountId" | "amount" | "approvedById" | "createdAt" | "id" | "message" | "name" | "status" | "updatedAt"
   DonationStatus: "APPROVED" | "PENDING" | "REJECTED"
-  NewsScalarFieldEnum: "authorId" | "createdAt" | "id" | "published" | "title" | "updatedAt"
+  NewsScalarFieldEnum: "authorId" | "content" | "createdAt" | "description" | "id" | "potrait" | "published" | "title" | "updatedAt" | "wide"
   QueryMode: "default" | "insensitive"
   Roles: "ADMIN" | "EDITOR" | "MASTER_ADMIN" | "USER"
   SortOrder: "asc" | "desc"
-  UserScalarFieldEnum: "createdAt" | "email" | "groupId" | "id" | "isAdmin" | "name" | "password" | "roles" | "showOnHomepage"
+  UserScalarFieldEnum: "createdAt" | "email" | "id" | "name" | "password" | "profilePicture" | "roles" | "showOnHomepage"
 }
 
 export interface NexusGenScalars {
@@ -1984,6 +2087,7 @@ export interface NexusGenObjects {
     approvedById?: number | null; // Int
     createdAt: NexusGenScalars['DateTime']; // DateTime!
     id: number; // Int!
+    message?: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt: NexusGenScalars['DateTime']; // DateTime!
@@ -2039,6 +2143,7 @@ export interface NexusGenObjects {
     approvedById: number; // Int!
     createdAt: number; // Int!
     id: number; // Int!
+    message: number; // Int!
     name: number; // Int!
     status: number; // Int!
     updatedAt: number; // Int!
@@ -2049,6 +2154,7 @@ export interface NexusGenObjects {
     approvedById?: number | null; // Int
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name?: string | null; // String
     status?: NexusGenEnums['DonationStatus'] | null; // DonationStatus
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -2059,6 +2165,7 @@ export interface NexusGenObjects {
     approvedById?: number | null; // Int
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     id?: number | null; // Int
+    message?: string | null; // String
     name?: string | null; // String
     status?: NexusGenEnums['DonationStatus'] | null; // DonationStatus
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
@@ -2072,11 +2179,15 @@ export interface NexusGenObjects {
   Mutation: {};
   News: { // root type
     authorId?: number | null; // Int
+    content: string; // String!
     createdAt: NexusGenScalars['DateTime']; // DateTime!
+    description?: string | null; // String
     id: number; // Int!
+    potrait?: string | null; // String
     published: boolean; // Boolean!
     title: string; // String!
     updatedAt: NexusGenScalars['DateTime']; // DateTime!
+    wide?: string | null; // String
   }
   NewsAvgAggregateOutputType: { // root type
     authorId?: number | null; // Float
@@ -2085,30 +2196,42 @@ export interface NexusGenObjects {
   NewsCountAggregateOutputType: { // root type
     _all: number; // Int!
     authorId: number; // Int!
+    content: number; // Int!
     createdAt: number; // Int!
+    description: number; // Int!
     id: number; // Int!
+    potrait: number; // Int!
     published: number; // Int!
     title: number; // Int!
     updatedAt: number; // Int!
+    wide: number; // Int!
   }
   NewsCountOutputType: { // root type
     categories: number; // Int!
   }
   NewsMaxAggregateOutputType: { // root type
     authorId?: number | null; // Int
+    content?: string | null; // String
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title?: string | null; // String
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsMinAggregateOutputType: { // root type
     authorId?: number | null; // Int
+    content?: string | null; // String
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    description?: string | null; // String
     id?: number | null; // Int
+    potrait?: string | null; // String
     published?: boolean | null; // Boolean
     title?: string | null; // String
     updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    wide?: string | null; // String
   }
   NewsSumAggregateOutputType: { // root type
     authorId?: number | null; // Int
@@ -2118,26 +2241,23 @@ export interface NexusGenObjects {
   User: { // root type
     createdAt: NexusGenScalars['DateTime']; // DateTime!
     email: string; // String!
-    groupId?: number | null; // Int
     id: number; // Int!
-    isAdmin: boolean; // Boolean!
     name?: string | null; // String
     password: string; // String!
+    profilePicture?: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage: boolean; // Boolean!
   }
   UserAvgAggregateOutputType: { // root type
-    groupId?: number | null; // Float
     id?: number | null; // Float
   }
   UserCountAggregateOutputType: { // root type
     _all: number; // Int!
     createdAt: number; // Int!
     email: number; // Int!
-    groupId: number; // Int!
     id: number; // Int!
-    isAdmin: number; // Int!
     name: number; // Int!
+    profilePicture: number; // Int!
     roles: number; // Int!
     showOnHomepage: number; // Int!
   }
@@ -2148,25 +2268,22 @@ export interface NexusGenObjects {
   UserMaxAggregateOutputType: { // root type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email?: string | null; // String
-    groupId?: number | null; // Int
     id?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
+    profilePicture?: string | null; // String
     roles?: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage?: boolean | null; // Boolean
   }
   UserMinAggregateOutputType: { // root type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email?: string | null; // String
-    groupId?: number | null; // Int
     id?: number | null; // Int
-    isAdmin?: boolean | null; // Boolean
     name?: string | null; // String
+    profilePicture?: string | null; // String
     roles?: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage?: boolean | null; // Boolean
   }
   UserSumAggregateOutputType: { // root type
-    groupId?: number | null; // Int
     id?: number | null; // Int
   }
 }
@@ -2256,6 +2373,7 @@ export interface NexusGenFieldTypes {
     approvedById: number | null; // Int
     createdAt: NexusGenScalars['DateTime']; // DateTime!
     id: number; // Int!
+    message: string | null; // String
     name: string; // String!
     status: NexusGenEnums['DonationStatus']; // DonationStatus!
     updatedAt: NexusGenScalars['DateTime']; // DateTime!
@@ -2313,6 +2431,7 @@ export interface NexusGenFieldTypes {
     approvedById: number; // Int!
     createdAt: number; // Int!
     id: number; // Int!
+    message: number; // Int!
     name: number; // Int!
     status: number; // Int!
     updatedAt: number; // Int!
@@ -2323,6 +2442,7 @@ export interface NexusGenFieldTypes {
     approvedById: number | null; // Int
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
     id: number | null; // Int
+    message: string | null; // String
     name: string | null; // String
     status: NexusGenEnums['DonationStatus'] | null; // DonationStatus
     updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
@@ -2333,6 +2453,7 @@ export interface NexusGenFieldTypes {
     approvedById: number | null; // Int
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
     id: number | null; // Int
+    message: string | null; // String
     name: string | null; // String
     status: NexusGenEnums['DonationStatus'] | null; // DonationStatus
     updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
@@ -2380,11 +2501,15 @@ export interface NexusGenFieldTypes {
     author: NexusGenRootTypes['User'] | null; // User
     authorId: number | null; // Int
     categories: NexusGenRootTypes['Category'][]; // [Category!]!
+    content: string; // String!
     createdAt: NexusGenScalars['DateTime']; // DateTime!
+    description: string | null; // String
     id: number; // Int!
+    potrait: string | null; // String
     published: boolean; // Boolean!
     title: string; // String!
     updatedAt: NexusGenScalars['DateTime']; // DateTime!
+    wide: string | null; // String
   }
   NewsAvgAggregateOutputType: { // field return type
     authorId: number | null; // Float
@@ -2393,30 +2518,42 @@ export interface NexusGenFieldTypes {
   NewsCountAggregateOutputType: { // field return type
     _all: number; // Int!
     authorId: number; // Int!
+    content: number; // Int!
     createdAt: number; // Int!
+    description: number; // Int!
     id: number; // Int!
+    potrait: number; // Int!
     published: number; // Int!
     title: number; // Int!
     updatedAt: number; // Int!
+    wide: number; // Int!
   }
   NewsCountOutputType: { // field return type
     categories: number; // Int!
   }
   NewsMaxAggregateOutputType: { // field return type
     authorId: number | null; // Int
+    content: string | null; // String
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
+    description: string | null; // String
     id: number | null; // Int
+    potrait: string | null; // String
     published: boolean | null; // Boolean
     title: string | null; // String
     updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
+    wide: string | null; // String
   }
   NewsMinAggregateOutputType: { // field return type
     authorId: number | null; // Int
+    content: string | null; // String
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
+    description: string | null; // String
     id: number | null; // Int
+    potrait: string | null; // String
     published: boolean | null; // Boolean
     title: string | null; // String
     updatedAt: NexusGenScalars['DateTime'] | null; // DateTime
+    wide: string | null; // String
   }
   NewsSumAggregateOutputType: { // field return type
     authorId: number | null; // Int
@@ -2454,27 +2591,24 @@ export interface NexusGenFieldTypes {
     approvedDonations: NexusGenRootTypes['Donation'][]; // [Donation!]!
     createdAt: NexusGenScalars['DateTime']; // DateTime!
     email: string; // String!
-    groupId: number | null; // Int
     id: number; // Int!
-    isAdmin: boolean; // Boolean!
     name: string | null; // String
     news: NexusGenRootTypes['News'][]; // [News!]!
     password: string; // String!
+    profilePicture: string | null; // String
     roles: NexusGenEnums['Roles']; // Roles!
     showOnHomepage: boolean; // Boolean!
   }
   UserAvgAggregateOutputType: { // field return type
-    groupId: number | null; // Float
     id: number | null; // Float
   }
   UserCountAggregateOutputType: { // field return type
     _all: number; // Int!
     createdAt: number; // Int!
     email: number; // Int!
-    groupId: number; // Int!
     id: number; // Int!
-    isAdmin: number; // Int!
     name: number; // Int!
+    profilePicture: number; // Int!
     roles: number; // Int!
     showOnHomepage: number; // Int!
   }
@@ -2485,25 +2619,22 @@ export interface NexusGenFieldTypes {
   UserMaxAggregateOutputType: { // field return type
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
     email: string | null; // String
-    groupId: number | null; // Int
     id: number | null; // Int
-    isAdmin: boolean | null; // Boolean
     name: string | null; // String
+    profilePicture: string | null; // String
     roles: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage: boolean | null; // Boolean
   }
   UserMinAggregateOutputType: { // field return type
     createdAt: NexusGenScalars['DateTime'] | null; // DateTime
     email: string | null; // String
-    groupId: number | null; // Int
     id: number | null; // Int
-    isAdmin: boolean | null; // Boolean
     name: string | null; // String
+    profilePicture: string | null; // String
     roles: NexusGenEnums['Roles'] | null; // Roles
     showOnHomepage: boolean | null; // Boolean
   }
   UserSumAggregateOutputType: { // field return type
-    groupId: number | null; // Int
     id: number | null; // Int
   }
 }
@@ -2583,6 +2714,7 @@ export interface NexusGenFieldTypeNames {
     approvedById: 'Int'
     createdAt: 'DateTime'
     id: 'Int'
+    message: 'String'
     name: 'String'
     status: 'DonationStatus'
     updatedAt: 'DateTime'
@@ -2640,6 +2772,7 @@ export interface NexusGenFieldTypeNames {
     approvedById: 'Int'
     createdAt: 'Int'
     id: 'Int'
+    message: 'Int'
     name: 'Int'
     status: 'Int'
     updatedAt: 'Int'
@@ -2650,6 +2783,7 @@ export interface NexusGenFieldTypeNames {
     approvedById: 'Int'
     createdAt: 'DateTime'
     id: 'Int'
+    message: 'String'
     name: 'String'
     status: 'DonationStatus'
     updatedAt: 'DateTime'
@@ -2660,6 +2794,7 @@ export interface NexusGenFieldTypeNames {
     approvedById: 'Int'
     createdAt: 'DateTime'
     id: 'Int'
+    message: 'String'
     name: 'String'
     status: 'DonationStatus'
     updatedAt: 'DateTime'
@@ -2707,11 +2842,15 @@ export interface NexusGenFieldTypeNames {
     author: 'User'
     authorId: 'Int'
     categories: 'Category'
+    content: 'String'
     createdAt: 'DateTime'
+    description: 'String'
     id: 'Int'
+    potrait: 'String'
     published: 'Boolean'
     title: 'String'
     updatedAt: 'DateTime'
+    wide: 'String'
   }
   NewsAvgAggregateOutputType: { // field return type name
     authorId: 'Float'
@@ -2720,30 +2859,42 @@ export interface NexusGenFieldTypeNames {
   NewsCountAggregateOutputType: { // field return type name
     _all: 'Int'
     authorId: 'Int'
+    content: 'Int'
     createdAt: 'Int'
+    description: 'Int'
     id: 'Int'
+    potrait: 'Int'
     published: 'Int'
     title: 'Int'
     updatedAt: 'Int'
+    wide: 'Int'
   }
   NewsCountOutputType: { // field return type name
     categories: 'Int'
   }
   NewsMaxAggregateOutputType: { // field return type name
     authorId: 'Int'
+    content: 'String'
     createdAt: 'DateTime'
+    description: 'String'
     id: 'Int'
+    potrait: 'String'
     published: 'Boolean'
     title: 'String'
     updatedAt: 'DateTime'
+    wide: 'String'
   }
   NewsMinAggregateOutputType: { // field return type name
     authorId: 'Int'
+    content: 'String'
     createdAt: 'DateTime'
+    description: 'String'
     id: 'Int'
+    potrait: 'String'
     published: 'Boolean'
     title: 'String'
     updatedAt: 'DateTime'
+    wide: 'String'
   }
   NewsSumAggregateOutputType: { // field return type name
     authorId: 'Int'
@@ -2781,27 +2932,24 @@ export interface NexusGenFieldTypeNames {
     approvedDonations: 'Donation'
     createdAt: 'DateTime'
     email: 'String'
-    groupId: 'Int'
     id: 'Int'
-    isAdmin: 'Boolean'
     name: 'String'
     news: 'News'
     password: 'String'
+    profilePicture: 'String'
     roles: 'Roles'
     showOnHomepage: 'Boolean'
   }
   UserAvgAggregateOutputType: { // field return type name
-    groupId: 'Float'
     id: 'Float'
   }
   UserCountAggregateOutputType: { // field return type name
     _all: 'Int'
     createdAt: 'Int'
     email: 'Int'
-    groupId: 'Int'
     id: 'Int'
-    isAdmin: 'Int'
     name: 'Int'
+    profilePicture: 'Int'
     roles: 'Int'
     showOnHomepage: 'Int'
   }
@@ -2812,25 +2960,22 @@ export interface NexusGenFieldTypeNames {
   UserMaxAggregateOutputType: { // field return type name
     createdAt: 'DateTime'
     email: 'String'
-    groupId: 'Int'
     id: 'Int'
-    isAdmin: 'Boolean'
     name: 'String'
+    profilePicture: 'String'
     roles: 'Roles'
     showOnHomepage: 'Boolean'
   }
   UserMinAggregateOutputType: { // field return type name
     createdAt: 'DateTime'
     email: 'String'
-    groupId: 'Int'
     id: 'Int'
-    isAdmin: 'Boolean'
     name: 'String'
+    profilePicture: 'String'
     roles: 'Roles'
     showOnHomepage: 'Boolean'
   }
   UserSumAggregateOutputType: { // field return type name
-    groupId: 'Int'
     id: 'Int'
   }
 }

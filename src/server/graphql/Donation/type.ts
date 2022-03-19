@@ -9,6 +9,7 @@ export const Donation = objectType({
   definition(t) {
     t.int('id')
     t.string('name')
+    t.nullable.string('message')
     t.float('amount')
     t.int('accountId')
     t.field('account', {
