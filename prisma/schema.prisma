@@ -98,7 +98,7 @@ enum DonationStatus {
 model Donation {
   id        Int             @id @default(autoincrement())
   name      String
-  message   String?
+  message   String          @default("")
   amount    Float
   accountId Int
   account   DonationAccount @relation(fields: [accountId], onDelete: Cascade, references: [id])

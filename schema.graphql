@@ -893,7 +893,7 @@ input DonationScalarWhereInput {
   approvedById: IntNullableFilter
   createdAt: DateTimeFilter
   id: IntFilter
-  message: StringNullableFilter
+  message: StringFilter
   name: StringFilter
   status: EnumDonationStatusFilter
   updatedAt: DateTimeFilter
@@ -908,7 +908,7 @@ input DonationScalarWhereWithAggregatesInput {
   approvedById: IntNullableWithAggregatesFilter
   createdAt: DateTimeWithAggregatesFilter
   id: IntWithAggregatesFilter
-  message: StringNullableWithAggregatesFilter
+  message: StringWithAggregatesFilter
   name: StringWithAggregatesFilter
   status: EnumDonationStatusWithAggregatesFilter
   updatedAt: DateTimeWithAggregatesFilter
@@ -988,7 +988,7 @@ input DonationUncheckedUpdateInput {
   approvedById: NullableIntFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1000,7 +1000,7 @@ input DonationUncheckedUpdateManyInput {
   approvedById: NullableIntFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1039,7 +1039,7 @@ input DonationUncheckedUpdateManyWithoutApprovedDonationsInput {
   amount: FloatFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1050,7 +1050,7 @@ input DonationUncheckedUpdateManyWithoutDonationsInput {
   approvedById: NullableIntFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1061,7 +1061,7 @@ input DonationUncheckedUpdateWithoutAccountInput {
   approvedById: NullableIntFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1072,7 +1072,7 @@ input DonationUncheckedUpdateWithoutApprovedByInput {
   amount: FloatFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1083,7 +1083,7 @@ input DonationUpdateInput {
   amount: FloatFieldUpdateOperationsInput
   approvedBy: UserUpdateOneWithoutApprovedDonationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1092,7 +1092,7 @@ input DonationUpdateInput {
 input DonationUpdateManyMutationInput {
   amount: FloatFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1150,7 +1150,7 @@ input DonationUpdateWithoutAccountInput {
   amount: FloatFieldUpdateOperationsInput
   approvedBy: UserUpdateOneWithoutApprovedDonationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1160,7 +1160,7 @@ input DonationUpdateWithoutApprovedByInput {
   account: DonationAccountUpdateOneRequiredWithoutDonationsInput
   amount: FloatFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
-  message: NullableStringFieldUpdateOperationsInput
+  message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -1189,7 +1189,7 @@ input DonationWhereInput {
   approvedById: IntNullableFilter
   createdAt: DateTimeFilter
   id: IntFilter
-  message: StringNullableFilter
+  message: StringFilter
   name: StringFilter
   status: EnumDonationStatusFilter
   updatedAt: DateTimeFilter

@@ -35,7 +35,7 @@ async function main() {
             data: {
                 title: `Test Berita ${i + 1}`,
                 potrait: `https://picsum.photos/id/${i + 1}/200/300`,
-                wide: "https://picsum.photos/id/${i + 1}/600/300",
+                wide: `https://picsum.photos/id/${i + 1}/600/300`,
                 content: "",
                 authorId: 1,
                 categories: {
@@ -88,11 +88,11 @@ async function main() {
         })
     }
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         await prisma.donation.create({
             data: {
                 name: "Hamba Allah",
-                amount: 100000,
+                amount: Math.random() * 1000 * 1000,
                 accountId: 1,
                 status: i > 5 ? "APPROVED" : "PENDING",
                 approvedById: i > 5 ? 1 : undefined,
