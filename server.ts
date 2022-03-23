@@ -52,7 +52,7 @@ export const server = new ApolloServer({
   },
 })
 
-server.listen().then(({ url }) => {
+server.listen(process.env.SERVER_PORT || 4500).then(({ url }) => {
 
   console.log(`🚀 Server ready at ${url}`)
 
