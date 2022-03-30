@@ -43,7 +43,12 @@ async function main() {
         potrait: `https://picsum.photos/id/${i + 1}/200/300`,
         wide: `https://picsum.photos/id/${i + 1}/600/300`,
         content: "",
-        authorId: 1,
+        shareCountMap: {},
+        author: {
+          connect: {
+            id: 1,
+          },
+        },
         categories: {
           connect,
         },
@@ -97,6 +102,7 @@ async function main() {
         accountId: 1,
         hideName: i < 5,
         type: "Sedekah",
+        cityName: "Berau",
         status: i > 5 ? "APPROVED" : "PENDING",
         approvedById: i > 5 ? 1 : undefined,
       },
