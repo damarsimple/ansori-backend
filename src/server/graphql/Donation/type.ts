@@ -9,7 +9,8 @@ export const Donation = objectType({
   definition(t) {
     t.int('id')
     t.string('name')
-    t.nullable.string('message')
+    t.boolean('hideName')
+    t.string('message')
     t.float('amount')
     t.int('accountId')
     t.field('account', {
@@ -19,6 +20,8 @@ export const Donation = objectType({
       },
     })
     t.field('status', { type: 'DonationStatus' })
+    t.string('cityName')
+    t.field('type', { type: 'DonationType' })
     t.nullable.int('approvedById')
     t.nullable.field('approvedBy', {
       type: 'User',

@@ -385,16 +385,20 @@ type Donation {
   amount: Float!
   approvedBy: User
   approvedById: Int
+  cityName: String!
   createdAt: DateTime!
+  hideName: Boolean!
   id: Int!
-  message: String
+  message: String!
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime!
 }
 
 type DonationAccount {
   _count: DonationAccountCountOutputType!
+  accountName: String!
   accountNumber: String!
   bankName: String!
   donations(cursor: DonationWhereUniqueInput, distinct: DonationScalarFieldEnum, orderBy: DonationOrderByWithRelationInput, skip: Int, take: Int, where: DonationWhereInput): [Donation!]!
@@ -413,6 +417,7 @@ input DonationAccountAvgOrderByAggregateInput {
 
 type DonationAccountCountAggregateOutputType {
   _all: Int!
+  accountName: Int!
   accountNumber: Int!
   bankName: Int!
   id: Int!
@@ -421,6 +426,7 @@ type DonationAccountCountAggregateOutputType {
 }
 
 input DonationAccountCountOrderByAggregateInput {
+  accountName: SortOrder
   accountNumber: SortOrder
   bankName: SortOrder
   id: SortOrder
@@ -433,6 +439,7 @@ type DonationAccountCountOutputType {
 }
 
 input DonationAccountCreateInput {
+  accountName: String!
   accountNumber: String!
   bankName: String!
   donations: DonationCreateNestedManyWithoutAccountInput
@@ -441,6 +448,7 @@ input DonationAccountCreateInput {
 }
 
 input DonationAccountCreateManyInput {
+  accountName: String!
   accountNumber: String!
   bankName: String!
   id: Int
@@ -460,6 +468,7 @@ input DonationAccountCreateOrConnectWithoutDonationsInput {
 }
 
 input DonationAccountCreateWithoutDonationsInput {
+  accountName: String!
   accountNumber: String!
   bankName: String!
   logoUrl: String!
@@ -467,6 +476,7 @@ input DonationAccountCreateWithoutDonationsInput {
 }
 
 type DonationAccountMaxAggregateOutputType {
+  accountName: String
   accountNumber: String
   bankName: String
   id: Int
@@ -475,6 +485,7 @@ type DonationAccountMaxAggregateOutputType {
 }
 
 input DonationAccountMaxOrderByAggregateInput {
+  accountName: SortOrder
   accountNumber: SortOrder
   bankName: SortOrder
   id: SortOrder
@@ -483,6 +494,7 @@ input DonationAccountMaxOrderByAggregateInput {
 }
 
 type DonationAccountMinAggregateOutputType {
+  accountName: String
   accountNumber: String
   bankName: String
   id: Int
@@ -491,6 +503,7 @@ type DonationAccountMinAggregateOutputType {
 }
 
 input DonationAccountMinOrderByAggregateInput {
+  accountName: SortOrder
   accountNumber: SortOrder
   bankName: SortOrder
   id: SortOrder
@@ -504,6 +517,7 @@ input DonationAccountOrderByWithAggregationInput {
   _max: DonationAccountMaxOrderByAggregateInput
   _min: DonationAccountMinOrderByAggregateInput
   _sum: DonationAccountSumOrderByAggregateInput
+  accountName: SortOrder
   accountNumber: SortOrder
   bankName: SortOrder
   id: SortOrder
@@ -512,6 +526,7 @@ input DonationAccountOrderByWithAggregationInput {
 }
 
 input DonationAccountOrderByWithRelationInput {
+  accountName: SortOrder
   accountNumber: SortOrder
   bankName: SortOrder
   donations: DonationOrderByRelationAggregateInput
@@ -526,6 +541,7 @@ input DonationAccountRelationFilter {
 }
 
 enum DonationAccountScalarFieldEnum {
+  accountName
   accountNumber
   bankName
   id
@@ -537,6 +553,7 @@ input DonationAccountScalarWhereWithAggregatesInput {
   AND: [DonationAccountScalarWhereWithAggregatesInput]
   NOT: [DonationAccountScalarWhereWithAggregatesInput]
   OR: [DonationAccountScalarWhereWithAggregatesInput]
+  accountName: StringWithAggregatesFilter
   accountNumber: StringWithAggregatesFilter
   bankName: StringWithAggregatesFilter
   id: IntWithAggregatesFilter
@@ -553,6 +570,7 @@ input DonationAccountSumOrderByAggregateInput {
 }
 
 input DonationAccountUncheckedCreateInput {
+  accountName: String!
   accountNumber: String!
   bankName: String!
   donations: DonationUncheckedCreateNestedManyWithoutAccountInput
@@ -562,6 +580,7 @@ input DonationAccountUncheckedCreateInput {
 }
 
 input DonationAccountUncheckedCreateWithoutDonationsInput {
+  accountName: String!
   accountNumber: String!
   bankName: String!
   id: Int
@@ -570,6 +589,7 @@ input DonationAccountUncheckedCreateWithoutDonationsInput {
 }
 
 input DonationAccountUncheckedUpdateInput {
+  accountName: StringFieldUpdateOperationsInput
   accountNumber: StringFieldUpdateOperationsInput
   bankName: StringFieldUpdateOperationsInput
   donations: DonationUncheckedUpdateManyWithoutAccountInput
@@ -579,6 +599,7 @@ input DonationAccountUncheckedUpdateInput {
 }
 
 input DonationAccountUncheckedUpdateManyInput {
+  accountName: StringFieldUpdateOperationsInput
   accountNumber: StringFieldUpdateOperationsInput
   bankName: StringFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
@@ -587,6 +608,7 @@ input DonationAccountUncheckedUpdateManyInput {
 }
 
 input DonationAccountUncheckedUpdateWithoutDonationsInput {
+  accountName: StringFieldUpdateOperationsInput
   accountNumber: StringFieldUpdateOperationsInput
   bankName: StringFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
@@ -595,6 +617,7 @@ input DonationAccountUncheckedUpdateWithoutDonationsInput {
 }
 
 input DonationAccountUpdateInput {
+  accountName: StringFieldUpdateOperationsInput
   accountNumber: StringFieldUpdateOperationsInput
   bankName: StringFieldUpdateOperationsInput
   donations: DonationUpdateManyWithoutAccountInput
@@ -603,6 +626,7 @@ input DonationAccountUpdateInput {
 }
 
 input DonationAccountUpdateManyMutationInput {
+  accountName: StringFieldUpdateOperationsInput
   accountNumber: StringFieldUpdateOperationsInput
   bankName: StringFieldUpdateOperationsInput
   logoUrl: StringFieldUpdateOperationsInput
@@ -618,6 +642,7 @@ input DonationAccountUpdateOneRequiredWithoutDonationsInput {
 }
 
 input DonationAccountUpdateWithoutDonationsInput {
+  accountName: StringFieldUpdateOperationsInput
   accountNumber: StringFieldUpdateOperationsInput
   bankName: StringFieldUpdateOperationsInput
   logoUrl: StringFieldUpdateOperationsInput
@@ -633,6 +658,7 @@ input DonationAccountWhereInput {
   AND: [DonationAccountWhereInput]
   NOT: [DonationAccountWhereInput]
   OR: [DonationAccountWhereInput]
+  accountName: StringFilter
   accountNumber: StringFilter
   bankName: StringFilter
   donations: DonationListRelationFilter
@@ -664,11 +690,14 @@ type DonationCountAggregateOutputType {
   accountId: Int!
   amount: Int!
   approvedById: Int!
+  cityName: Int!
   createdAt: Int!
+  hideName: Int!
   id: Int!
   message: Int!
   name: Int!
   status: Int!
+  type: Int!
   updatedAt: Int!
 }
 
@@ -676,11 +705,14 @@ input DonationCountOrderByAggregateInput {
   accountId: SortOrder
   amount: SortOrder
   approvedById: SortOrder
+  cityName: SortOrder
   createdAt: SortOrder
+  hideName: SortOrder
   id: SortOrder
   message: SortOrder
   name: SortOrder
   status: SortOrder
+  type: SortOrder
   updatedAt: SortOrder
 }
 
@@ -688,21 +720,27 @@ input DonationCreateInput {
   account: DonationAccountCreateNestedOneWithoutDonationsInput!
   amount: Float!
   approvedBy: UserCreateNestedOneWithoutApprovedDonationsInput
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
 input DonationCreateManyAccountInput {
   amount: Float!
   approvedById: Int
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
@@ -714,11 +752,14 @@ input DonationCreateManyAccountInputEnvelope {
 input DonationCreateManyApprovedByInput {
   accountId: Int!
   amount: Float!
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
@@ -731,11 +772,14 @@ input DonationCreateManyInput {
   accountId: Int!
   amount: Float!
   approvedById: Int
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
@@ -766,20 +810,26 @@ input DonationCreateOrConnectWithoutApprovedByInput {
 input DonationCreateWithoutAccountInput {
   amount: Float!
   approvedBy: UserCreateNestedOneWithoutApprovedDonationsInput
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
 input DonationCreateWithoutApprovedByInput {
   account: DonationAccountCreateNestedOneWithoutDonationsInput!
   amount: Float!
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
@@ -793,11 +843,14 @@ type DonationMaxAggregateOutputType {
   accountId: Int
   amount: Float
   approvedById: Int
+  cityName: String
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String
   status: DonationStatus
+  type: DonationType
   updatedAt: DateTime
 }
 
@@ -805,11 +858,14 @@ input DonationMaxOrderByAggregateInput {
   accountId: SortOrder
   amount: SortOrder
   approvedById: SortOrder
+  cityName: SortOrder
   createdAt: SortOrder
+  hideName: SortOrder
   id: SortOrder
   message: SortOrder
   name: SortOrder
   status: SortOrder
+  type: SortOrder
   updatedAt: SortOrder
 }
 
@@ -817,11 +873,14 @@ type DonationMinAggregateOutputType {
   accountId: Int
   amount: Float
   approvedById: Int
+  cityName: String
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String
   status: DonationStatus
+  type: DonationType
   updatedAt: DateTime
 }
 
@@ -829,11 +888,14 @@ input DonationMinOrderByAggregateInput {
   accountId: SortOrder
   amount: SortOrder
   approvedById: SortOrder
+  cityName: SortOrder
   createdAt: SortOrder
+  hideName: SortOrder
   id: SortOrder
   message: SortOrder
   name: SortOrder
   status: SortOrder
+  type: SortOrder
   updatedAt: SortOrder
 }
 
@@ -850,11 +912,14 @@ input DonationOrderByWithAggregationInput {
   accountId: SortOrder
   amount: SortOrder
   approvedById: SortOrder
+  cityName: SortOrder
   createdAt: SortOrder
+  hideName: SortOrder
   id: SortOrder
   message: SortOrder
   name: SortOrder
   status: SortOrder
+  type: SortOrder
   updatedAt: SortOrder
 }
 
@@ -864,11 +929,14 @@ input DonationOrderByWithRelationInput {
   amount: SortOrder
   approvedBy: UserOrderByWithRelationInput
   approvedById: SortOrder
+  cityName: SortOrder
   createdAt: SortOrder
+  hideName: SortOrder
   id: SortOrder
   message: SortOrder
   name: SortOrder
   status: SortOrder
+  type: SortOrder
   updatedAt: SortOrder
 }
 
@@ -876,11 +944,14 @@ enum DonationScalarFieldEnum {
   accountId
   amount
   approvedById
+  cityName
   createdAt
+  hideName
   id
   message
   name
   status
+  type
   updatedAt
 }
 
@@ -891,11 +962,14 @@ input DonationScalarWhereInput {
   accountId: IntFilter
   amount: FloatFilter
   approvedById: IntNullableFilter
+  cityName: StringFilter
   createdAt: DateTimeFilter
+  hideName: BoolFilter
   id: IntFilter
   message: StringFilter
   name: StringFilter
   status: EnumDonationStatusFilter
+  type: EnumDonationTypeFilter
   updatedAt: DateTimeFilter
 }
 
@@ -906,11 +980,14 @@ input DonationScalarWhereWithAggregatesInput {
   accountId: IntWithAggregatesFilter
   amount: FloatWithAggregatesFilter
   approvedById: IntNullableWithAggregatesFilter
+  cityName: StringWithAggregatesFilter
   createdAt: DateTimeWithAggregatesFilter
+  hideName: BoolWithAggregatesFilter
   id: IntWithAggregatesFilter
   message: StringWithAggregatesFilter
   name: StringWithAggregatesFilter
   status: EnumDonationStatusWithAggregatesFilter
+  type: EnumDonationTypeWithAggregatesFilter
   updatedAt: DateTimeWithAggregatesFilter
 }
 
@@ -934,15 +1011,26 @@ input DonationSumOrderByAggregateInput {
   id: SortOrder
 }
 
+enum DonationType {
+  Infaq
+  Sedekah
+  Yatim_Piatu
+  Zakat_Fitrah
+  Zakat_Mal
+}
+
 input DonationUncheckedCreateInput {
   accountId: Int!
   amount: Float!
   approvedById: Int
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
@@ -963,22 +1051,28 @@ input DonationUncheckedCreateNestedManyWithoutApprovedByInput {
 input DonationUncheckedCreateWithoutAccountInput {
   amount: Float!
   approvedById: Int
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
 input DonationUncheckedCreateWithoutApprovedByInput {
   accountId: Int!
   amount: Float!
+  cityName: String!
   createdAt: DateTime
+  hideName: Boolean
   id: Int
   message: String
   name: String!
   status: DonationStatus!
+  type: DonationType!
   updatedAt: DateTime
 }
 
@@ -986,11 +1080,14 @@ input DonationUncheckedUpdateInput {
   accountId: IntFieldUpdateOperationsInput
   amount: FloatFieldUpdateOperationsInput
   approvedById: NullableIntFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
@@ -998,11 +1095,14 @@ input DonationUncheckedUpdateManyInput {
   accountId: IntFieldUpdateOperationsInput
   amount: FloatFieldUpdateOperationsInput
   approvedById: NullableIntFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
@@ -1037,44 +1137,56 @@ input DonationUncheckedUpdateManyWithoutApprovedByInput {
 input DonationUncheckedUpdateManyWithoutApprovedDonationsInput {
   accountId: IntFieldUpdateOperationsInput
   amount: FloatFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input DonationUncheckedUpdateManyWithoutDonationsInput {
   amount: FloatFieldUpdateOperationsInput
   approvedById: NullableIntFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input DonationUncheckedUpdateWithoutAccountInput {
   amount: FloatFieldUpdateOperationsInput
   approvedById: NullableIntFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input DonationUncheckedUpdateWithoutApprovedByInput {
   accountId: IntFieldUpdateOperationsInput
   amount: FloatFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   id: IntFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
@@ -1082,19 +1194,25 @@ input DonationUpdateInput {
   account: DonationAccountUpdateOneRequiredWithoutDonationsInput
   amount: FloatFieldUpdateOperationsInput
   approvedBy: UserUpdateOneWithoutApprovedDonationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input DonationUpdateManyMutationInput {
   amount: FloatFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
@@ -1149,20 +1267,26 @@ input DonationUpdateWithWhereUniqueWithoutApprovedByInput {
 input DonationUpdateWithoutAccountInput {
   amount: FloatFieldUpdateOperationsInput
   approvedBy: UserUpdateOneWithoutApprovedDonationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
 input DonationUpdateWithoutApprovedByInput {
   account: DonationAccountUpdateOneRequiredWithoutDonationsInput
   amount: FloatFieldUpdateOperationsInput
+  cityName: StringFieldUpdateOperationsInput
   createdAt: DateTimeFieldUpdateOperationsInput
+  hideName: BoolFieldUpdateOperationsInput
   message: StringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
   status: EnumDonationStatusFieldUpdateOperationsInput
+  type: EnumDonationTypeFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
 }
 
@@ -1187,11 +1311,14 @@ input DonationWhereInput {
   amount: FloatFilter
   approvedBy: UserWhereInput
   approvedById: IntNullableFilter
+  cityName: StringFilter
   createdAt: DateTimeFilter
+  hideName: BoolFilter
   id: IntFilter
   message: StringFilter
   name: StringFilter
   status: EnumDonationStatusFilter
+  type: EnumDonationTypeFilter
   updatedAt: DateTimeFilter
 }
 
@@ -1218,6 +1345,27 @@ input EnumDonationStatusWithAggregatesFilter {
   in: [DonationStatus]
   not: NestedEnumDonationStatusWithAggregatesFilter
   notIn: [DonationStatus]
+}
+
+input EnumDonationTypeFieldUpdateOperationsInput {
+  set: DonationType
+}
+
+input EnumDonationTypeFilter {
+  equals: DonationType
+  in: [DonationType]
+  not: NestedEnumDonationTypeFilter
+  notIn: [DonationType]
+}
+
+input EnumDonationTypeWithAggregatesFilter {
+  _count: NestedIntFilter
+  _max: NestedEnumDonationTypeFilter
+  _min: NestedEnumDonationTypeFilter
+  equals: DonationType
+  in: [DonationType]
+  not: NestedEnumDonationTypeWithAggregatesFilter
+  notIn: [DonationType]
 }
 
 input EnumRolesFieldUpdateOperationsInput {
@@ -1541,6 +1689,29 @@ input IntWithAggregatesFilter {
 """Json custom scalar type"""
 scalar Json
 
+input JsonFilter {
+  equals: Json
+  not: Json
+}
+
+enum JsonNullValueFilter {
+  AnyNull
+  DbNull
+  JsonNull
+}
+
+enum JsonNullValueInput {
+  JsonNull
+}
+
+input JsonWithAggregatesFilter {
+  _count: NestedIntFilter
+  _max: NestedJsonFilter
+  _min: NestedJsonFilter
+  equals: Json
+  not: Json
+}
+
 type Member {
   createdAt: DateTime!
   description: String
@@ -1760,6 +1931,11 @@ input MemberWhereUniqueInput {
   id: Int
 }
 
+type MetalPrice {
+  name: String
+  price: Float
+}
+
 type Mutation {
   createOneCategory(data: CategoryCreateInput!): Category!
   createOneDonation(data: DonationCreateInput!): Donation!
@@ -1858,6 +2034,23 @@ input NestedEnumDonationStatusWithAggregatesFilter {
   in: [DonationStatus]
   not: NestedEnumDonationStatusWithAggregatesFilter
   notIn: [DonationStatus]
+}
+
+input NestedEnumDonationTypeFilter {
+  equals: DonationType
+  in: [DonationType]
+  not: NestedEnumDonationTypeFilter
+  notIn: [DonationType]
+}
+
+input NestedEnumDonationTypeWithAggregatesFilter {
+  _count: NestedIntFilter
+  _max: NestedEnumDonationTypeFilter
+  _min: NestedEnumDonationTypeFilter
+  equals: DonationType
+  in: [DonationType]
+  not: NestedEnumDonationTypeWithAggregatesFilter
+  notIn: [DonationType]
 }
 
 input NestedEnumRolesFilter {
@@ -1969,6 +2162,11 @@ input NestedIntWithAggregatesFilter {
   notIn: [Int]
 }
 
+input NestedJsonFilter {
+  equals: Json
+  not: Json
+}
+
 input NestedStringFilter {
   contains: String
   endsWith: String
@@ -2042,6 +2240,7 @@ type News {
   id: Int!
   potrait: String
   published: Boolean!
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime!
@@ -2070,6 +2269,7 @@ type NewsCountAggregateOutputType {
   id: Int!
   potrait: Int!
   published: Int!
+  shareCountMap: Int!
   slug: Int!
   title: Int!
   updatedAt: Int!
@@ -2085,6 +2285,7 @@ input NewsCountOrderByAggregateInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  shareCountMap: SortOrder
   slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
@@ -2104,6 +2305,7 @@ input NewsCreateInput {
   description: String
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2118,6 +2320,7 @@ input NewsCreateManyAuthorInput {
   id: Int
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2138,6 +2341,7 @@ input NewsCreateManyInput {
   id: Int
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2175,6 +2379,7 @@ input NewsCreateWithoutAuthorInput {
   description: String
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2189,6 +2394,7 @@ input NewsCreateWithoutCategoriesInput {
   description: String
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2279,6 +2485,7 @@ input NewsOrderByWithAggregationInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  shareCountMap: SortOrder
   slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
@@ -2296,6 +2503,7 @@ input NewsOrderByWithRelationInput {
   id: SortOrder
   potrait: SortOrder
   published: SortOrder
+  shareCountMap: SortOrder
   slug: SortOrder
   title: SortOrder
   updatedAt: SortOrder
@@ -2311,6 +2519,7 @@ enum NewsScalarFieldEnum {
   id
   potrait
   published
+  shareCountMap
   slug
   title
   updatedAt
@@ -2329,6 +2538,7 @@ input NewsScalarWhereInput {
   id: IntFilter
   potrait: StringNullableFilter
   published: BoolFilter
+  shareCountMap: JsonFilter
   slug: StringFilter
   title: StringFilter
   updatedAt: DateTimeFilter
@@ -2347,6 +2557,7 @@ input NewsScalarWhereWithAggregatesInput {
   id: IntWithAggregatesFilter
   potrait: StringNullableWithAggregatesFilter
   published: BoolWithAggregatesFilter
+  shareCountMap: JsonWithAggregatesFilter
   slug: StringWithAggregatesFilter
   title: StringWithAggregatesFilter
   updatedAt: DateTimeWithAggregatesFilter
@@ -2375,6 +2586,7 @@ input NewsUncheckedCreateInput {
   id: Int
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2403,6 +2615,7 @@ input NewsUncheckedCreateWithoutAuthorInput {
   id: Int
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2418,6 +2631,7 @@ input NewsUncheckedCreateWithoutCategoriesInput {
   id: Int
   potrait: String
   published: Boolean
+  shareCountMap: Json!
   slug: String!
   title: String!
   updatedAt: DateTime
@@ -2434,6 +2648,7 @@ input NewsUncheckedUpdateInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2449,6 +2664,7 @@ input NewsUncheckedUpdateManyInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2490,6 +2706,7 @@ input NewsUncheckedUpdateManyWithoutNewsInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2505,6 +2722,7 @@ input NewsUncheckedUpdateWithoutAuthorInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2520,6 +2738,7 @@ input NewsUncheckedUpdateWithoutCategoriesInput {
   id: IntFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2535,6 +2754,7 @@ input NewsUpdateInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2548,6 +2768,7 @@ input NewsUpdateManyMutationInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2609,6 +2830,7 @@ input NewsUpdateWithoutAuthorInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2623,6 +2845,7 @@ input NewsUpdateWithoutCategoriesInput {
   description: NullableStringFieldUpdateOperationsInput
   potrait: NullableStringFieldUpdateOperationsInput
   published: BoolFieldUpdateOperationsInput
+  shareCountMap: Json
   slug: StringFieldUpdateOperationsInput
   title: StringFieldUpdateOperationsInput
   updatedAt: DateTimeFieldUpdateOperationsInput
@@ -2655,6 +2878,7 @@ input NewsWhereInput {
   id: IntFilter
   potrait: StringNullableFilter
   published: BoolFilter
+  shareCountMap: JsonFilter
   slug: StringFilter
   title: StringFilter
   updatedAt: DateTimeFilter
@@ -2715,6 +2939,8 @@ type Query {
   findUniqueMember(where: MemberWhereUniqueInput!): Member
   findUniqueNews(where: NewsWhereUniqueInput!): News
   findUniqueUser(where: UserWhereUniqueInput!): User
+  getBerasPrice: MetalPrice
+  getEmasPrice: MetalPrice
 }
 
 enum QueryMode {

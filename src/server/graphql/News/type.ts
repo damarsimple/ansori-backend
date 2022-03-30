@@ -39,6 +39,7 @@ export const News = objectType({
     t.nullable.string('wide')
     t.string('content')
     t.nullable.string('description')
+    t.json('shareCountMap')
     t.field('_count', {
       type: 'NewsCountOutputType',
       resolve(root: any) {

@@ -71,6 +71,8 @@ model News {
   content     String
   description String?
 
+  shareCountMap Json
+
 }
 
 model Category {
@@ -84,6 +86,7 @@ model DonationAccount {
   id            Int        @id @default(autoincrement())
   name          String
   accountNumber String
+  accountName   String
   bankName      String
   logoUrl       String
   donations     Donation[]
@@ -95,14 +98,27 @@ enum DonationStatus {
   REJECTED
 }
 
+enum DonationType {
+  Infaq
+  Sedekah
+  Zakat_Mal
+  Zakat_Fitrah
+  Yatim_Piatu
+}
+
 model Donation {
   id        Int             @id @default(autoincrement())
   name      String
+  hideName  Boolean         @default(false)
   message   String          @default("")
   amount    Float
   accountId Int
   account   DonationAccount @relation(fields: [accountId], onDelete: Cascade, references: [id])
   status    DonationStatus
+
+  cityName String
+
+  type DonationType
 
   approvedById Int?
   approvedBy   User? @relation(fields: [approvedById], onDelete: Cascade, references: [id])

@@ -10,6 +10,7 @@ export const DonationAccount = objectType({
     t.int('id')
     t.string('name')
     t.string('accountNumber')
+    t.string('accountName')
     t.string('bankName')
     t.string('logoUrl')
     t.list.field('donations', {

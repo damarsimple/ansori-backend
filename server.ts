@@ -1,41 +1,39 @@
-import { makeSchema } from 'nexus'
+import { makeSchema } from "nexus";
 
-import { join } from 'path'
-import { ApolloServer } from 'apollo-server'
-import * as types from "./src/server/graphql"
-import { paljs } from '@paljs/nexus';
-import { context } from './src/modules/context';
+import { join } from "path";
+import { ApolloServer } from "apollo-server";
+import * as types from "./src/server/graphql";
+import { paljs } from "@paljs/nexus";
+import { context } from "./src/modules/context";
 
 export const schema = makeSchema({
   types,
 
   outputs: {
+    typegen: join(__dirname, "nexus-typegen.ts"),
 
-    typegen: join(__dirname, 'nexus-typegen.ts'),
-
-    schema: join(__dirname, 'schema.graphql'),
-
+    schema: join(__dirname, "schema.graphql"),
   },
 
-  plugins: [paljs({
-    excludeFields: ['password'],
-  })],
+  plugins: [
+    paljs({
+      excludeFields: ["password"],
+    }),
+  ],
   contextType: {
-
     module: join(__dirname, "src/modules/context.ts"),
 
     export: "Context",
-
   },
-})
-
+});
 
 export const server = new ApolloServer({
-  schema, context: async ({ req }) => {
+  schema,
+  context: async ({ req }) => {
     // Get the user token from the headers.
     const token = req.headers.authorization || "";
 
-    return context
+    return context;
 
     if (!token) return context;
 
@@ -50,10 +48,8 @@ export const server = new ApolloServer({
     //   ...context,
     // };
   },
-})
+});
 
 server.listen(process.env.SERVER_PORT || 4500).then(({ url }) => {
-
-  console.log(`🚀 Server ready at ${url}`)
-
-})
+  console.log(`🚀 Server ready at ${url}`);
+});
