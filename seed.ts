@@ -1,12 +1,12 @@
 import { prisma } from "./src/modules/context";
-import { hash } from "./src/modules/hash";
+import { create } from "./src/modules/Hash";
 
 async function main() {
   await prisma.user.create({
     data: {
       name: "Damar Albaribin",
       email: "damaralbaribin@gmail.com",
-      password: await hash("123456"),
+      password: await create("123456"),
       roles: "MASTER_ADMIN",
       showOnHomepage: true,
     },

@@ -9,6 +9,10 @@ import type { core } from "nexus"
 declare global {
   interface NexusGenCustomInputMethods<TypeName extends string> {
     /**
+     * The `Upload` scalar type represents a file upload.
+     */
+    upload<FieldName extends string>(fieldName: FieldName, opts?: core.CommonInputFieldConfig<TypeName, FieldName>): void // "Upload";
+    /**
      * Json custom scalar type
      */
     json<FieldName extends string>(fieldName: FieldName, opts?: core.CommonInputFieldConfig<TypeName, FieldName>): void // "Json";
@@ -28,6 +32,10 @@ declare global {
 }
 declare global {
   interface NexusGenCustomOutputMethods<TypeName extends string> {
+    /**
+     * The `Upload` scalar type represents a file upload.
+     */
+    upload<FieldName extends string>(fieldName: FieldName, ...opts: core.ScalarOutSpread<TypeName, FieldName>): void // "Upload";
     /**
      * Json custom scalar type
      */
@@ -2557,6 +2565,7 @@ export interface NexusGenScalars {
   DateTime: any
   Decimal: any
   Json: any
+  Upload: any
 }
 
 export interface NexusGenObjects {
@@ -2608,6 +2617,12 @@ export interface NexusGenObjects {
     _max?: NexusGenRootTypes['UserMaxAggregateOutputType'] | null; // UserMaxAggregateOutputType
     _min?: NexusGenRootTypes['UserMinAggregateOutputType'] | null; // UserMinAggregateOutputType
     _sum?: NexusGenRootTypes['UserSumAggregateOutputType'] | null; // UserSumAggregateOutputType
+  }
+  AuthResponse: { // root type
+    message?: string | null; // String
+    status?: boolean | null; // Boolean
+    token?: string | null; // String
+    user?: NexusGenRootTypes['User'] | null; // User
   }
   BatchPayload: { // root type
     count: number; // Int!
@@ -3027,6 +3042,12 @@ export interface NexusGenFieldTypes {
     _min: NexusGenRootTypes['UserMinAggregateOutputType'] | null; // UserMinAggregateOutputType
     _sum: NexusGenRootTypes['UserSumAggregateOutputType'] | null; // UserSumAggregateOutputType
   }
+  AuthResponse: { // field return type
+    message: string | null; // String
+    status: boolean | null; // Boolean
+    token: string | null; // String
+    user: NexusGenRootTypes['User'] | null; // User
+  }
   BatchPayload: { // field return type
     count: number; // Int!
   }
@@ -3285,6 +3306,10 @@ export interface NexusGenFieldTypes {
     deleteOneMember: NexusGenRootTypes['Member'] | null; // Member
     deleteOneNews: NexusGenRootTypes['News'] | null; // News
     deleteOneUser: NexusGenRootTypes['User'] | null; // User
+    login: NexusGenRootTypes['AuthResponse'] | null; // AuthResponse
+    register: NexusGenRootTypes['AuthResponse'] | null; // AuthResponse
+    reportShare: boolean | null; // Boolean
+    reportView: boolean | null; // Boolean
     updateManyCategory: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyDonation: NexusGenRootTypes['BatchPayload']; // BatchPayload!
     updateManyDonationAccount: NexusGenRootTypes['BatchPayload']; // BatchPayload!
@@ -3299,6 +3324,7 @@ export interface NexusGenFieldTypes {
     updateOneMember: NexusGenRootTypes['Member']; // Member!
     updateOneNews: NexusGenRootTypes['News']; // News!
     updateOneUser: NexusGenRootTypes['User']; // User!
+    uploadFile: string | null; // String
     upsertOneCategory: NexusGenRootTypes['Category']; // Category!
     upsertOneDonation: NexusGenRootTypes['Donation']; // Donation!
     upsertOneDonationAccount: NexusGenRootTypes['DonationAccount']; // DonationAccount!
@@ -3527,6 +3553,12 @@ export interface NexusGenFieldTypeNames {
     _max: 'UserMaxAggregateOutputType'
     _min: 'UserMinAggregateOutputType'
     _sum: 'UserSumAggregateOutputType'
+  }
+  AuthResponse: { // field return type name
+    message: 'String'
+    status: 'Boolean'
+    token: 'String'
+    user: 'User'
   }
   BatchPayload: { // field return type name
     count: 'Int'
@@ -3786,6 +3818,10 @@ export interface NexusGenFieldTypeNames {
     deleteOneMember: 'Member'
     deleteOneNews: 'News'
     deleteOneUser: 'User'
+    login: 'AuthResponse'
+    register: 'AuthResponse'
+    reportShare: 'Boolean'
+    reportView: 'Boolean'
     updateManyCategory: 'BatchPayload'
     updateManyDonation: 'BatchPayload'
     updateManyDonationAccount: 'BatchPayload'
@@ -3800,6 +3836,7 @@ export interface NexusGenFieldTypeNames {
     updateOneMember: 'Member'
     updateOneNews: 'News'
     updateOneUser: 'User'
+    uploadFile: 'String'
     upsertOneCategory: 'Category'
     upsertOneDonation: 'Donation'
     upsertOneDonationAccount: 'DonationAccount'
@@ -4064,6 +4101,23 @@ export interface NexusGenArgTypes {
     deleteOneUser: { // args
       where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
     }
+    login: { // args
+      email: string; // String!
+      password: string; // String!
+    }
+    register: { // args
+      email: string; // String!
+      name: string; // String!
+      password: string; // String!
+      roles: NexusGenEnums['Roles']; // Roles!
+    }
+    reportShare: { // args
+      id: number; // Int!
+      key: string; // String!
+    }
+    reportView: { // args
+      id: number; // Int!
+    }
     updateManyCategory: { // args
       data: NexusGenInputs['CategoryUpdateManyMutationInput']; // CategoryUpdateManyMutationInput!
       where?: NexusGenInputs['CategoryWhereInput'] | null; // CategoryWhereInput
@@ -4119,6 +4173,9 @@ export interface NexusGenArgTypes {
     updateOneUser: { // args
       data: NexusGenInputs['UserUpdateInput']; // UserUpdateInput!
       where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
+    }
+    uploadFile: { // args
+      file?: NexusGenScalars['Upload'] | null; // Upload
     }
     upsertOneCategory: { // args
       create: NexusGenInputs['CategoryCreateInput']; // CategoryCreateInput!

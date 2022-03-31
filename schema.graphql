@@ -58,6 +58,13 @@ type AggregateUser {
   _sum: UserSumAggregateOutputType
 }
 
+type AuthResponse {
+  message: String
+  status: Boolean
+  token: String
+  user: User
+}
+
 type BatchPayload {
   count: Int!
 }
@@ -1958,6 +1965,10 @@ type Mutation {
   deleteOneMember(where: MemberWhereUniqueInput!): Member
   deleteOneNews(where: NewsWhereUniqueInput!): News
   deleteOneUser(where: UserWhereUniqueInput!): User
+  login(email: String!, password: String!): AuthResponse
+  register(email: String!, name: String!, password: String!, roles: Roles!): AuthResponse
+  reportShare(id: Int!, key: String!): Boolean
+  reportView(id: Int!): Boolean
   updateManyCategory(data: CategoryUpdateManyMutationInput!, where: CategoryWhereInput): BatchPayload!
   updateManyDonation(data: DonationUpdateManyMutationInput!, where: DonationWhereInput): BatchPayload!
   updateManyDonationAccount(data: DonationAccountUpdateManyMutationInput!, where: DonationAccountWhereInput): BatchPayload!
@@ -1972,6 +1983,7 @@ type Mutation {
   updateOneMember(data: MemberUpdateInput!, where: MemberWhereUniqueInput!): Member!
   updateOneNews(data: NewsUpdateInput!, where: NewsWhereUniqueInput!): News!
   updateOneUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User!
+  uploadFile(file: Upload): String
   upsertOneCategory(create: CategoryCreateInput!, update: CategoryUpdateInput!, where: CategoryWhereUniqueInput!): Category!
   upsertOneDonation(create: DonationCreateInput!, update: DonationUpdateInput!, where: DonationWhereUniqueInput!): Donation!
   upsertOneDonationAccount(create: DonationAccountCreateInput!, update: DonationAccountUpdateInput!, where: DonationAccountWhereUniqueInput!): DonationAccount!
@@ -3029,6 +3041,9 @@ input StringWithAggregatesFilter {
   notIn: [String]
   startsWith: String
 }
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
 
 type User {
   _count: UserCountOutputType!
